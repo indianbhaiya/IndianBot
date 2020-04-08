@@ -1,4 +1,6 @@
 import pyfiglet
+from userbot.utils import admin_cmd
+
 #@command(pattern="^.figlet ?(.*)", outgoing=True)
 @command(pattern="^.figlet ?(.*))
 async def figlet(event):
