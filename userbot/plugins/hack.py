@@ -9,6 +9,7 @@ from telethon import events
 
 import asyncio
 from uniborg.util import admin_cmd
+from telethon.tl.functions.users import GetFullUserRequest
 
 
 
@@ -43,7 +44,7 @@ async def _(event):
             "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Hacking... 84%\n█████████████████████▒▒▒▒ `",
             "`Hacking... 100%\n█████████HACKED███████████ `",
-            "`Targeted Account Hacked...\n\nPay 69$ To` @Halto_Tha `To Remove this hack..`"
+            "`Targeted Account Hacked...\n\nPay 69$ To` @pureindialover `To Remove this hack..`"
         ]
 
     for i in animation_ttl:
