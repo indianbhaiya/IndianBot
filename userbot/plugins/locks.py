@@ -3,9 +3,11 @@ from telethon.tl.types import ChatBannedRights
 from userbot import ALIVE_NAME
 from userbot import CMD_HELP
 from userbot.events import register, errors_handler
+from userbot.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-@register(outgoing=True, pattern=r"^.lock ?(.*)")
+#@register(outgoing=True, pattern=r"^.lock ?(.*)")
+@borg.on(admin_cmd(pattern=r"lock ?(.*)"))
 @errors_handler
 async def locks(event):
     input_str = event.pattern_match.group(1).lower()
