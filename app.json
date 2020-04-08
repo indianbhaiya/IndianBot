@@ -34,6 +34,14 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
+    "PLUGIN_CHANNEL": {
+      "description": "Create a private group add rose  then type /id. PLUGIN_CHANNEL and PRIVATE_GROUP_ID both values should be same",
+      "value": ""
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "Create a private group add rose bot then type /id. PLUGIN_CHANNEL and PRIVATE_GROUP_ID both values should be same",
+      "value": ""
+    },
     "STRING_SESSION": {
       "description": "Get this value by running python3 telesetup.py locally",
       "value": ""
