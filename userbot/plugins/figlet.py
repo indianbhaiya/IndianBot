@@ -2,7 +2,7 @@ import pyfiglet
 from userbot.utils import admin_cmd
 
 #@command(pattern="^.figlet ?(.*)", outgoing=True)
-@command(pattern="^.figlet ?(.*))
+@borg.on(admin_cmd(pattern=r"figlet ?(.*)"))
 async def figlet(event):
     if event.fwd_from:
         return
