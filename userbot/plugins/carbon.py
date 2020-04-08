@@ -160,7 +160,7 @@ async def carbon_api(e):
 
          )
 
-   os.remove('./GujjuBot.png')
+   os.remove('./IndianBot.png')
 
    driver.quit()
 
