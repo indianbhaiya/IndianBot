@@ -116,7 +116,7 @@ async def _(event):
             await silently_send_message(bot_conv, packshortname)
             await bot_conv.send_file(
                 file=uploaded_sticker,
-                allow_cache=False,
+                allow_cache=True,
                 force_document=True
             )
             response = await bot_conv.get_response()
