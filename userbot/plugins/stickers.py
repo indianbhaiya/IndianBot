@@ -112,7 +112,7 @@ async def _(event):
                 return
         else:
             await silently_send_message(bot_conv, "/cancel")
-            await silently_send_message(bot_conv, "/addsticker")
+            await silently_send_message(bot_conv, "/newanimated")
             await silently_send_message(bot_conv, packshortname)
             await bot_conv.send_file(
                 file=uploaded_sticker,
