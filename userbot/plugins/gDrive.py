@@ -35,7 +35,7 @@ G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
 
 
 #@command(pattern="^.ugdrive ?(.*)")
-@borg.on(admin_cmd(pattern=r"drivesch ?(.*)"))
+@borg.on(admin_cmd(pattern=r"ugdrive ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -100,7 +100,8 @@ async def _(event):
     else:
         await mone.edit("File Not found in local server. Give me a file path :((")
 
-@command(pattern="^.drivesch ?(.*)")
+#@command(pattern="^.drivesch ?(.*)")
+
 async def sch(event):
     if event.fwd_from:
         return
