@@ -5,10 +5,13 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 import asyncio
 import shutil
+from userbot.utils import admin_cmd
+
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
-@command(pattern="^.autopic", outgoing=True)
+#@command(pattern="^.autopic", outgoing=True)
+@borg.on(admin_cmd(pattern=r"autopic"))
 async def autopic(event):
     downloaded_file_name = "userbot/original_pic.png"
     downloader = SmartDL(Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False)
