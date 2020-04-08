@@ -1,6 +1,6 @@
 import pyfiglet
-
-@command(pattern="^.figlet ?(.*)", outgoing=True)
+#@command(pattern="^.figlet ?(.*)", outgoing=True)
+@command(pattern="^.figlet ?(.*))
 async def figlet(event):
     if event.fwd_from:
         return
