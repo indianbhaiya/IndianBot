@@ -1,7 +1,7 @@
 """Carbon Scraper Plugin for Userbot. //text in creative way.
 usage: .karb //as a reply to any text message
 
-Thanks to @r4v4n4 for vars,,, Random RGB feature by @PhycoNinja13b"""
+Thanks to @pureindialover for vars,,, Random RGB feature by @PhycoNinja13b"""
 
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
@@ -88,11 +88,11 @@ async def carbon_api(e):
 
    driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
    sleep(5) # this might take a bit.
-   driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
-   sleep(5)
+   #driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
+   #sleep(5)
    await e.edit("⬛⬛⬛⬜⬜")
-   driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
-   sleep(5) #Waiting for downloading
+   #driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
+   #sleep(5) #Waiting for downloading
 
    await e.edit("⬛⬛⬛⬛⬛")
    file = './carbon.png'
