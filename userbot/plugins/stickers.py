@@ -63,7 +63,7 @@ async def _(event):
         if userid == 953414679:
            packname = f"IndianBhaikeStickers" 
            packshortname = "IndianBhai_ke_locker_me" 
-            else:
+        else:
         packname = f"{userid}'s kang pack" 
             packshortname = f"IndianBot_{userid}_stickers" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
