@@ -1,6 +1,8 @@
 from userbot import CMD_LIST
+from userbot.utils import admin_cmd
 
-@command(pattern="^.help ?(.*)")
+#@command(pattern="^.help ?(.*)")
+@borg.on(admin_cmd(pattern=r"help ?(.*)"))
 async def cmd_list(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
@@ -37,8 +39,7 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = """Userbot Helper.. \nProvided by [IndianBot](https://t.me/IndianArMyGiveaway)\n
-`Userbot Helper to reveal all the commands`"""
+            help_string = """Userbot Helper.. \nProvided by [IndianBot](https://t.me/IndianArMyGiveaway)\n`Userbot Helper to reveal all the commands`"""
             results = await bot.inline_query(  # pylint:disable=E0602
                 tgbotusername,
                 help_string
