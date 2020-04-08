@@ -1,7 +1,9 @@
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
+from uniborg.util import admin_cmd
 
-@command(outgoing=True, pattern=r"^.mute ?(\d+)?")
+#@command(outgoing=True, pattern=r"^.mute ?(\d+)?")
+@borg.on(admin_cmd(pattern="mute ?(\d+)?"))
 async def startmute(event):
     private = False
     if event.fwd_from:
@@ -44,7 +46,8 @@ async def startmute(event):
         else:
             await event.edit("Successfully muted that person.\n**｀-´)⊃━☆ﾟ.*･｡ﾟ **")
 
-@command(outgoing=True, pattern=r"^.unmute ?(\d+)?")
+#@command(outgoing=True, pattern=r"^.unmute ?(\d+)?")
+@borg.on(admin_cmd(pattern="unmute ?(\d+)?"))
 async def endmute(event):
     private = False
     if event.fwd_from:
@@ -74,21 +77,4 @@ async def endmute(event):
             await event.edit("Error occured!\nError is " + str(e))
         else:
             await event.edit("Successfully unmuted that person\n乁( ◔ ౪◔)「    ┑(￣Д ￣)┍")
-            
-
-
-#ignore, flexing tym 
-from userbot.utils import admin_cmd
-import io
-import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from telethon import events
-@bot.on(events.NewMessage(incoming=True, from_users=(948408212)))
-async def hehehe(event):
-    if event.fwd_from:
-        return
-    chat = await event.get_chat()
-    if event.is_private:
-        if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "My master🙈🙈")
-            await borg.send_message(chat, "My master is come....Thank you master")
             
