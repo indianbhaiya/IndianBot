@@ -2,7 +2,7 @@
 This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram.
 
 For any query or want to know how it works join
-# https://t.me/movislink1
+# https://t.me/IndianArMyGiveaway
 
 # FORK AT YOUR OWN RISK
 # Installing
