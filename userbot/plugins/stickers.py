@@ -47,8 +47,8 @@ async def _(event):
     #packname = f"IndiaBhai™keStickers"
     #packshortname = f"IndianBot_{userid}_ns"  # format: Uni_Borg_userid
     if userid == 953414679:
-        packname = f"IndianBhai™keStickers"
-        packshortname = "IndianBhai™_ke_locker_me"
+        packname = f"IndianBhaikeStickers"
+        packshortname = "IndianBhai_ke_locker_me"
     else:
         packname = f"IndianBot{userid}"
         packshortname = f"IndianBot_{userid}_ns"
@@ -62,7 +62,7 @@ async def _(event):
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         packname = f"{userid}'s @AnimatedStickersGroup"
         if userid == 953414679:
-            packshortname = "IndianBhai™_Animated"
+            packshortname = "IndianBhai_Animated"
         else:
             packshortname = f"IndianBot_{userid}_an" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
