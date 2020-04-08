@@ -27,8 +27,8 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.from_id
         # make meself invulnerable cuz why not xD
-        if idd == 948408212:
-            await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ [Jayu](tg://user?id=948408212) __to release your account__😏")
+        if idd == 953414679:
+            await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ [Indian Bhai](tg://user?id=953414679) __to release your account__😏")
         else:
             jnl=("`Warning!! `"
                   "[{}](tg://user?id={})"
