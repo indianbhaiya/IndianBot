@@ -83,7 +83,7 @@ async def _(event):
         if not await stickerset_exists(bot_conv, packshortname):
             await silently_send_message(bot_conv, "/cancel")
             if is_a_s:
-                response = await silently_send_message(bot_conv, "/newanimated")
+                response = await silently_send_message(bot_conv, "/addsticker")
             else:
                 response = await silently_send_message(bot_conv, "/newpack")
             if "Yay!" not in response.text:
