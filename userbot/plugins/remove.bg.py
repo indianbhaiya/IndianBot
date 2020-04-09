@@ -39,7 +39,7 @@ async def _(event):
         message_id = event.reply_to_msg_id
         reply_message = await event.get_reply_message()
         # check if media message
-        await event.edit("Ooh Analysing dis pic...")
+        await event.edit("Connecting to official IndianBot server and analysing that img ...")
         try:
             downloaded_file_name = await borg.download_media(
                 reply_message,
@@ -81,7 +81,7 @@ async def _(event):
 # with the name provided.
 def ReTrieveFile(input_file_name):
     headers = {
-        "API-Key": Config.REM_BG_API_KEY,
+        "X-API-Key": Config.REM_BG_API_KEY,
     }
     files = {
         "image_file": (input_file_name, open(input_file_name, "rb")),
@@ -98,7 +98,7 @@ def ReTrieveFile(input_file_name):
 
 def ReTrieveURL(input_url):
     headers = {
-        "API-Key": Config.REM_BG_API_KEY,
+        "X-API-Key": Config.REM_BG_API_KEY,
     }
     data = {
       "image_url": input_url
