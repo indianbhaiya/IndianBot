@@ -31,7 +31,7 @@ async def install(event):
                 await event.edit("Installed Plugin `{}`".format(os.path.basename(downloaded_file_name)))
             else:
                 os.remove(downloaded_file_name)
-                await event.edit("Errors! Cannot install this plugin.")
+                await event.edit("Errors! This plugin is already installed/pre-installed.")
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
             os.remove(downloaded_file_name)
@@ -51,7 +51,7 @@ async def send(event):
         the_plugin_file,
         force_document=True,
         allow_cache=False,
-        reply_to=event.message.reply_to_msg_id
+        reply_to=message_id
     )
     end = datetime.now()
     time_taken_in_ms = (end - start).seconds
