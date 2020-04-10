@@ -8,7 +8,7 @@ For any query or want to know how it works join
 
 ### The Easy Way
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+# [![Deploy To Heroku](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Findianbhaiya%2FIndianBot&template=https%3A%2F%2Fgithub.com%2Findianbhaiya%2FIndianBot)](https://heroku.com/deploy)
 
 ### The Normal Way
 
