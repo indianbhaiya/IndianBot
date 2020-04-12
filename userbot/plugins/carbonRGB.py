@@ -1,7 +1,7 @@
 """Carbon Scraper Plugin for Userbot. //text in creative way.
 usage: .karb //as a reply to any text message
 
-Thanks to @pureindialover for vars,,, Random RGB feature by @PhycoNinja13b"""
+Thanks to @pureindialover for THIS PLUGIN"""
 
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
