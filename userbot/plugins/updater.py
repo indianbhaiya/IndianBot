@@ -6,6 +6,8 @@ from contextlib import suppress
 import os
 import sys
 import asyncio
+from userbot.utils import admin_cmd
+
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
@@ -34,7 +36,8 @@ RESTARTING_APP = "re-starting heroku application"
 # -- Constants End -- #
 
 
-@command(pattern="^.update", outgoing=True)
+#@command(pattern="^.update", outgoing=True)
+@borg.on(admin_cmd(pattern=r"update"))
 async def updater(message):
     try:
         repo = git.Repo()
