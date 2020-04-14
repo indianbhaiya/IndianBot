@@ -46,7 +46,7 @@ async def _(event):
     if tgbotusername is not None:
         results = await borg.inline_query(  # pylint:disable=E0602
             tgbotusername,
-            help_string + "\n\n" + s_help_string
+            help_string + "\n\n"
         )
         await results[0].click(
             event.chat_id,
@@ -55,7 +55,7 @@ async def _(event):
         )
         await event.delete()
     else:
-        await event.reply(help_string + "\n\n" + s_help_string)
+        await event.reply(help_string + "\n\n")
         await event.delete()
 
 
@@ -74,4 +74,4 @@ async def _(event):
     result = await borg(functions.help.GetConfigRequest())  # pylint:disable=E0602
     result = result.stringify()
     logger.info(result)  # pylint:disable=E0602
-    await event.edit("""Telethon UserBot powered by @UniBorg""")
+    await event.edit("""Telethon UserBot powered by @IndianArMyGiveaway""")
