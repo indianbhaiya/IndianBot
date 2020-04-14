@@ -1,3 +1,5 @@
+'''Thakn You @pureindialover
+'''
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
 from uniborg.util import admin_cmd
@@ -78,3 +80,8 @@ async def endmute(event):
         else:
             await event.edit("Successfully unmuted that person\n乁( ◔ ౪◔)「    ┑(￣Д ￣)┍")
             
+
+@command(incoming=True)
+async def watcher(event):
+    if is_muted(event.sender_id, event.chat_id):
+        await event.delete()
