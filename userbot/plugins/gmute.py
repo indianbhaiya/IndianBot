@@ -12,7 +12,7 @@ async def startgmute(event):
     if event.fwd_from:
         return
     elif event.is_private:
-        await event.edit("Unexpected issues or ugly errors may occur!")
+        await event.edit("Putting Duct Tape on that person's mouth!")
         await asyncio.sleep(3)
         private = True
     reply = await event.get_reply_message()
@@ -27,13 +27,13 @@ async def startgmute(event):
     chat_id = event.chat_id
     chat = await event.get_chat()
     if is_muted(userid, "gmute"):
-        return await event.edit("This user is already gmuted")
+        return await event.edit("Duct Tape is already availabe on this user's mouth")
     try:
         mute(userid, "gmute")
     except Exception as e:
         await event.edit("Error occured!\nError is " + str(e))
     else:
-        await event.edit("Successfully gmuted that person")
+        await event.edit("Successfully putted Duct Tape on that person's mouth")
 
 #@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
@@ -42,7 +42,7 @@ async def endgmute(event):
     if event.fwd_from:
         return
     elif event.is_private:
-        await event.edit("Unexpected issues or ugly errors may occur!")
+        await event.edit("Removed Duct Tape from that person's mouth!")
         await asyncio.sleep(3)
         private = True
     reply = await event.get_reply_message()
@@ -56,14 +56,14 @@ async def endgmute(event):
         return await event.edit("Please reply to a user or add their into the command to ungmute them.")
     chat_id = event.chat_id
     if not is_muted(userid, "gmute"):
-        return await event.edit("This user is not gmuted")
+        return await event.edit("Duct Tape is not on this user's mouth")
     try:
         unmute(userid, "gmute")
     except Exception as e:
         await event.edit("Error occured!\nError is " + str(e))
     else:
-        await event.edit("Successfully ungmuted that person")
-
+        await event.edit("Successfully Removed Duct Tape from that person's mouth")
+        
 @command(incoming=True)
 async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
