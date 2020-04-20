@@ -1,6 +1,8 @@
 """Emoji
 Available Commands:
-.np"""
+.np
+Credits to @pureindialover
+"""
 
 from telethon import events
 
