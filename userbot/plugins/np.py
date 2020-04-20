@@ -27,6 +27,7 @@ async def _(event):
             "No Problem Sar 😇. Jao",
             "No Problem Sar 😇. Jao gand",
             "No Problem Sar 😇. Jao gand Marao"
+         ]
             
 
     for i in animation_ttl:
