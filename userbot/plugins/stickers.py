@@ -65,7 +65,7 @@ async def _(event):
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
-        file_ext_ns_ion = "AnimatedSticke.TGS"
+        file_ext_ns_ion = "AnimatedSticker.TGS"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         if userid == 953414679:
             packname = f"IndiaBhaikeAnimeted"
