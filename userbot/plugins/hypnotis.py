@@ -28,7 +28,7 @@ async def _(event):
 
     #if input_str == "hypno":
 
-    await event.edit(input_str)
+   await event.edit("hypnotysing...")
 
     animation_chars = [
         
