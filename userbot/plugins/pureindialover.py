@@ -10,6 +10,8 @@ import asyncio
 
 from userbot.utils import admin_cmd
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
+
 @borg.on(admin_cmd("pureindialover"))
 async def _(event):
     if event.fwd_from:
@@ -18,15 +20,15 @@ async def _(event):
     animation_ttl = range(0,36)
     #input_str = event.pattern_match.group(1)
    # if input_str == "pureindialover":
-    await event.edit("@pureindialover")
+    await event.edit("{DEFAULTUSER}")
     animation_chars = [
-            "@pureindialover tera baap",
+            "{DEFAULTUSER} tera baap",
             "@pureindialover is bot ka creator",
-            "@pureindialover is bot ko jaan dene wala",
+            "{DEFAULTUSER} bot ko jaan dene wala",
             "@pureindialover owner of @IndianArMyGiveaway ",
             "tujhe aur kya chaiye vo hai mere sath",
             "tera baap",
-            "@pureindialover"
+            "{DEFAULTUSER}"
          ]
             
 
