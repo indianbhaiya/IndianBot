@@ -5,6 +5,8 @@ Credits to @pureindialover
 """
 
 from telethon import events
+ 
+from userbot import ALIVE_NAME
 
 import asyncio
 
