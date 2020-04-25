@@ -5,14 +5,11 @@ Credits to @pureindialover
 """
 
 from telethon import events
- 
-from userbot import ALIVE_NAME
 
 import asyncio
 
 from userbot.utils import admin_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 
 @borg.on(admin_cmd("pureindialover"))
 async def _(event):
@@ -22,15 +19,15 @@ async def _(event):
     animation_ttl = range(0,36)
     #input_str = event.pattern_match.group(1)
    # if input_str == "pureindialover":
-    await event.edit("{DEFAULTUSER}")
+    await event.edit("@pureindialover")
     animation_chars = [
-            "{DEFAULTUSER} tera baap",
+            "@pureindialover tera baap",
             "@pureindialover is bot ka creator",
-            "{DEFAULTUSER} bot ko jaan dene wala",
+            "pureindialover bot ko jaan dene wala",
             "@pureindialover owner of @IndianArMyGiveaway ",
             "tujhe aur kya chaiye vo hai mere sath",
             "tera baap",
-            "{DEFAULTUSER}"
+            "@pureindialover"
          ]
             
 
