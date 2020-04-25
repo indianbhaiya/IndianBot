@@ -23,7 +23,7 @@ async def _(event):
     animation_chars = [
             "@pureindialover tera baap",
             "@pureindialover is bot ka creator",
-            "pureindialover bot ko jaan dene wala",
+            "@pureindialover bot ko jaan dene wala",
             "@pureindialover owner of @IndianArMyGiveaway ",
             "tujhe aur kya chaiye vo hai mere sath",
             "tera baap",
