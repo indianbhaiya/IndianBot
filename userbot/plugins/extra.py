@@ -31,7 +31,7 @@ async def fun(e):
 
 @borg.on(admin_cmd("yo$"))
 #@register(outgoing=True, pattern="^yo$")
-async def Oof(e):
+async def Ooo(e):
     t = "yo"
     for j in range(15):
         t = t[:-1] + "of"
