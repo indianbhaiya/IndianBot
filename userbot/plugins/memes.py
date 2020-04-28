@@ -984,7 +984,7 @@ async def proo (pros):
 async def chutiya (fuks):
     """ String for fhu only -_-"""
     if not fuks.text[0].isalpha() and fuks.text[0] not in ("/", "#", "@", "!"):
-        index = random.randint(0, len(CHU_STRINGS) - 1)
+        index = random.randint(0, len(FUK_STRINGS) - 1)
         reply_text = FUK_STRINGS[index]
         await fuks.edit(reply_text)
 
