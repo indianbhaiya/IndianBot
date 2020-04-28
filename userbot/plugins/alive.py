@@ -13,11 +13,11 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars 
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("**Jinda Hu Sarr ^.^** \n`Your bot is running Hot`\n\n"
+    await alive.edit("**Apun Zinda He Sarr ^.^** \n`🇮🇳BOT Status : ` **☣Hot**\n\n"
                      f"`My peru owner`: {DEFAULTUSER}\n\n"
-                     "`Telethon version:` **6.9.0**\n`Python:` **3.7.3**\n"
+                     "`Telethon version:` **6.0.9**\n`Python:` **3.7.4**\n"
                      "`Database Status:` **😀ALL OK**\n\n`Always with you, my master!\n`"
                      "**Bot Creator:** [🇮🇳INDIAN BHAI](t.me/pureindialover)\n"
                      "**Co-Owner:** [🇮🇳AKASH](t.me/AKASH_AM1)\n\n"
-                     "          [🇮🇳Deploy This IndianBot🇮🇳](https://github.com/indianbhaiya/IndianBot)") 
+                     "       [🇮🇳Deploy This IndianBot🇮🇳](https://github.com/indianbhaiya/IndianBot)") 
 
