@@ -16,7 +16,7 @@ async def amireallyalive(alive):
     await alive.edit("`Jinda Hu Sarr ^.^ \nYour bot is running\n\nTelethon version: 6.9.0\nPython: 3.7.3\n\n`"
                      f"`My peru owner`: {DEFAULTUSER}\n\n"
                      "`Telethon version: 6.9.0\nPython: 3.7.3\nfork by:` @pureindialover\n"
-                     "@AKASH_AM1Database Status: Databases functioning normally!\n\nAlways with you, my master!\n`"
+                     "`Database Status: Databases functioning normally!\n\nAlways with you, my master!\n`"
                      "`Bot Creator:` @pureindialover\n"
                      "`Promoted By:` @AKASH_AM1\n\n"
                      "[Deploy this userbot Now](https://github.com/indianbhaiya/IndianBot)") 
