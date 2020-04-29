@@ -522,28 +522,6 @@ ABUSEHARD_STRING = [
         "`Marzi Ka Sex Pap Nahi Hota.. Piche Se Dalne Wala Kabhi Baap Nahi Hota.. Condom Zarur Lagana Mere Dost Qki.. Sex K Waqt Popat Ke Pass Dimag Nahi Hota.`",
         "`Uss Ne Hothon Se Chhu Kar Lowd* Pe Nasha Kar Diya; Lu*D Ki Baat To Aur Thi, Uss Ne To Jhato* Ko Bhi Khada Kar Diya!`",
 ]
-HELLOSTR = [
-    "`Hi !`",
-    "`‘Ello, gov'nor!`",
-    "`What’s crackin’?`",
-    "`‘Sup, homeslice?`",
-    "`Howdy, howdy ,howdy!`",
-    "`Hello, who's there, I'm talking.`",
-    "`You know who this is.`",
-    "`Yo!`",
-    "`Whaddup.`",
-    "`Greetings and salutations!`",
-    "`Hello, sunshine!`",
-    "`Hey, howdy, hi!`",
-    "`What’s kickin’, little chicken?`",
-    "`Peek-a-boo!`",
-    "`Howdy-doody!`",
-    "`Hey there, freshman!`",
-    "`I come in peace!`",
-    "`Ahoy, matey!`",
-    "`Hiya!`",
-    "`Oh retarded gey! Well Hello`",
-]
 
 SHGS = [
     "┐(´д｀)┌",
@@ -936,13 +914,6 @@ async def zal(zgfy):
             reply_text.append(charac)
 
         await zgfy.edit("".join(reply_text))
-
-
-@register(outgoing=True, pattern="^.hi$")
-async def hoi(hello):
-    """ Greet everyone! """
-    if not hello.text[0].isalpha() and hello.text[0] not in ("/", "#", "@", "!"):
-        await hello.edit(random.choice(HELLOSTR))
 			  
 @register(outgoing=True, pattern="^.pkill$")
 async def killing (killed):
