@@ -1,6 +1,6 @@
 """ Powered by @Google
 Available Commands:
-.go <query>
+.go <query> credits to owner of bot
 """
 
 import asyncio
