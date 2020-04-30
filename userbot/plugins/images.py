@@ -3,7 +3,7 @@ Syntax: `.img <Name>` or `.img (replied message)`
 \n Upgraded and Google Image Error Fixed
 """
 
-from userbot.googol_images import googleimagesdownload
+from userbot.google_imgs import googleimagesdownload
 import os
 import shutil
 from re import findall
