@@ -17,15 +17,15 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = "https://github.com/Indianbhaiya/IndianBot"
-BOT_IS_UP_TO_DATE = "the userbot is up-to-date."
+BOT_IS_UP_TO_DATE = "**🔷The IndianBot Is : ☣HOT**"
 NEW_BOT_UP_DATE_FOUND = (
-    "new update found for {branch_name}\n"
-    "changelog: \n\n{changelog}\n"
-    "updating ..."
+    "🔶New Update Found In Dr.IndianBot\n"
+    f"**Channel-Log :** \n\n{changelog}\n"
+    "**🇮🇳Resatarting🎉🇮🇳**"
 )
 NEW_UP_DATE_FOUND = (
-    "new update found for {branch_name}\n"
-    "updating ..."
+    "**🇮🇳New Update Found For Dr.IndianBot**\n"
+    "**Restarting ...**"
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -73,7 +73,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("Updating...")
+        await message.edit("🔶🔷Update Started🇮🇳")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -141,7 +141,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("restarted! do `.alive` to check if I am online?\n It will takes approximately 5 mins to update your userbot")
+    await message.edit("**Hello Sir☣ , This is Dr.IndianBot \n🇮🇳 I Am Successfully Updated\nNow just Restaring!!\n🔷I will take Max 3 Mins**")
     await remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
