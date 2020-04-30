@@ -29,6 +29,7 @@ lxml
 oauth2client
 psycopg2
 psycopg2-binary
+PyLyrics
 pySmartDL
 pybase64>=0.4.0
 pyfiglet
