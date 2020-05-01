@@ -24,7 +24,7 @@ NEW_BOT_UP_DATE_FOUND = (
     "**🇮🇳Resatarting🎉🇮🇳**"
 )
 NEW_UP_DATE_FOUND = (
-    "**🇮🇳New Update Found For Dr.IndianBot**\n"
+    "**🇮🇳New Update Found For Dr.IndianBot**\n{branchname}\n"
     "**Restarting ...**"
 )
 REPO_REMOTE_NAME = "temponame"
