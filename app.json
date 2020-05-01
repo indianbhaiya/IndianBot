@@ -28,7 +28,8 @@
     },
     "CHANNEL": {
     "description": "Ur Telegram Channel Url",
-    "value": ""
+    "value": "",
+    "required":false
     },
     "APP_ID": {
       "description": "Get this value from my.telegram.org! Please do not steal",
