@@ -20,7 +20,7 @@ OFFICIAL_UPSTREAM_REPO = "https://github.com/Indianbhaiya/IndianBot"
 BOT_IS_UP_TO_DATE = "**🔷The IndianBot Is : ☣HOT**"
 NEW_BOT_UP_DATE_FOUND = (
     "🔶New Update Found In Dr.IndianBot\n"
-    f"**Channel-Log :** \n\n{changelog}\n"
+    "**Channel-Log :** \n\n{changelog}\n"
     "**🇮🇳Resatarting🎉🇮🇳**"
 )
 NEW_UP_DATE_FOUND = (
