@@ -80,10 +80,7 @@ async def updater(message):
         branch_name=active_branch_name,
         changelog=changelog
     )
-    message_two = NEW_UP_DATE_FOUND.format(
-        branch_name=active_branch_name
-    )
-
+    
     if len(message_one) > 4095:
         with open("change.log", "w+", encoding="utf8") as out_file:
             out_file.write(str(message_one))
