@@ -17,9 +17,9 @@ USER_BOT_NO_WARN = ("[──▄█▀█▄─────────██ \n�
                     "`Hello, This Is` **🇮🇳IndianBot🇮🇳 Security Service**."
                     "**I Am Made By A Pro , I Found Ur Way Through "
                     f"{DEFAULTUSER}'s inbox**.\n\n"
-                    "`🔶I Am :` **☣HOT🔥**"
+                    "`🔶I Am :` **☣HOT🔥**/n/n"
                     "**This Is Regarded As Illegal And A Crime😬**\n\n"
-                    "** So Send **/start** To Start A Valid Conv. ")
+                    "** So Send `/start` To Start A Valid Conversation. ")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
