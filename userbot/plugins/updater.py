@@ -8,7 +8,6 @@ import sys
 import asyncio
 from userbot.utils import admin_cmd
 
-
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
     "looks like a custom branch {branch_name} "
@@ -16,16 +15,16 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "in this case, Updater is unable to identify the branch to be updated."
     "please check out to an official branch, and re-start the updater."
 )
-OFFICIAL_UPSTREAM_REPO = "https://github.com/Indianbhaiya/IndianBot"
-BOT_IS_UP_TO_DATE = "**🔷The IndianBot Is : ☣HOT**"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/indianbhaiya/IndianBot"
+BOT_IS_UP_TO_DATE = "the userbot is up-to-date."
 NEW_BOT_UP_DATE_FOUND = (
-    "🔶New Update Found In Dr.IndianBot\n"
-    "**Channel-Log :** \n\n{changelog}\n"
-    "**🇮🇳Resatarting🎉🇮🇳**"
+    "new update found for {branch_name}\n"
+    "changelog: \n\n{changelog}\n"
+    "updating ..."
 )
 NEW_UP_DATE_FOUND = (
-    "**🇮🇳New Update Found For Dr.IndianBot**\n{branchname}\n"
-    "**Restarting ...**"
+    "new update found for {branch_name}\n"
+    "updating ..."
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -73,7 +72,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("🔶🔷Update Started🇮🇳...")
+        await message.edit("Updating...")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -83,7 +82,7 @@ async def updater(message):
     message_two = NEW_UP_DATE_FOUND.format(
         branch_name=active_branch_name
     )
-    
+
     if len(message_one) > 4095:
         with open("change.log", "w+", encoding="utf8") as out_file:
             out_file.write(str(message_one))
@@ -141,7 +140,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("**Hello Sir☣ , This is Dr.IndianBot \n🇮🇳 I Am Successfully Updated\nNow just Restaring!!\n🔷I will take Max 3 Mins**")
+    await message.edit("restarted! do `.alive` to check if I am online?\nIt will takes approximately 5 mins to update your userbot")
     await remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
