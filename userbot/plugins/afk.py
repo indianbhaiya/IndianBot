@@ -29,7 +29,7 @@ async def set_not_afk(event):
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Please set `PRIVATE_GROUP_BOT_API_ID` " + \
+                "Please set `PLUGIN_CHANNEL` " + \
                 "for the proper functioning of afk functionality " + \
                 "in @IndianArMyGiveaway\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
