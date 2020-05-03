@@ -8,7 +8,7 @@ For any query or want to know how it works join
 
 ### The Easy Way
 
-# [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+          [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ### The Normal Way
 
