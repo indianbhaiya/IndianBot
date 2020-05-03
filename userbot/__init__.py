@@ -101,7 +101,7 @@ if bool(ENV):
     AUTONAME = os.environ.get("AUTONAME", None)
 
     # Time & Date - Country and Time Zone
-    COUNTRY = str(os.environ.get("COUNTRY", ""))
+    COUNTRY = str(os.environ.get("COUNTRY", "India"))
 
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
 
