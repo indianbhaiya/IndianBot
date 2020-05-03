@@ -12,7 +12,7 @@ async def _(event):
     if event.fwd_from:
         return
     if Config.PLUGIN_CHANNEL is None:
-        await event.edit("Please set the required environment variable `PRIVATE_CHANNEL_BOT_API_ID` for this plugin to work")
+        await event.edit("Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work")
         return
     try:
         e = await borg.get_entity(Config.PLUGIN_CHANNEL)
