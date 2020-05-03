@@ -1,4 +1,4 @@
-"""Enable Seen Counter in any message,
+"""Enable Seen Counter in any message, Fix by @pureindialover
 to know how many users have seen your message
 Syntax: .fwd as reply to any message"""
 from telethon import events
@@ -11,11 +11,11 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    if Config.PRIVATE_CHANNEL_BOT_API_ID is None:
+    if Config.PLUGIN_CHANNEL is None:
         await event.edit("Please set the required environment variable `PRIVATE_CHANNEL_BOT_API_ID` for this plugin to work")
         return
     try:
-        e = await borg.get_entity(Config.PRIVATE_CHANNEL_BOT_API_ID)
+        e = await borg.get_entity(Config.PLUGIN_CHANNEL)
     except Exception as e:
         await event.edit(str(e))
     else:
