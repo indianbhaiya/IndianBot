@@ -34,7 +34,7 @@ async def sticklet(event):
     draw = ImageDraw.Draw(image)
     fontsize = 230
 
-    FONT_FILE = await get_font_file(event.client, "@FontRes")
+    FONT_FILE = await get_font_file(event.client, "@IndianBot_Fonts")
 
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
@@ -46,7 +46,7 @@ async def sticklet(event):
     draw.multiline_text(((512-width)/2,(512-height)/2), sticktext, font=font, fill=(R, G, B))
 
     image_stream = io.BytesIO()
-    image_stream.name = "@UniBorg.webp"
+    image_stream.name = "@IndianBot_Official.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
 
