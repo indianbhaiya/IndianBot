@@ -92,7 +92,7 @@ async def _(event):
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
     else:
-      await brog.send_message("**INVALID** -- FOR HELP COMMAND IS **.jav --h**")
+      await brog.send_message(event.chat_id, "**INVALID** -- FOR HELP COMMAND IS **.jav --h**")
       await event.delete()
 
 
