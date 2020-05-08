@@ -57,7 +57,7 @@ async def _(event):
         packshortname = "IndianBhai_ke_locker_me"
     else:
         packname = f"{user.first_name}'s IndianBot Vol.{pack}"
-        packshortname = f"Vol_{pack}_with_{user.first_name}"
+        packshortname = f"IndianBot_{userid}"
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
