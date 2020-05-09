@@ -91,6 +91,17 @@ async def _(event):
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
+    elif sysarg == "ss":
+      async with borg.conversation(bot) as conv:
+          try:
+              await conv.send_message("/start")
+              response = await conv.get_response()
+              await conv.send_message("/acc")
+              audio = await conv.get_response()
+              await borg.send_file(event.chat_id, audio, caption="**CREDITS : Dr.BlueDevil**\n`Check out` [IndianBot](https://github.com/indianbhiya/IndianBot)")
+              await event.delete()
+          except YouBlockedUserError:
+              await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
     else:
       await brog.send_message(event.chat_id, "**INVALID** -- FOR HELP COMMAND IS **.jav --h**")
       await event.delete()
