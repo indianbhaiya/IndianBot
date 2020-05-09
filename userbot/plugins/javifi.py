@@ -91,7 +91,7 @@ async def _(event):
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
-    elif sysarg == "ss":
+    elif sysarg == "acc":
       async with borg.conversation(bot) as conv:
           try:
               await conv.send_message("/start")
