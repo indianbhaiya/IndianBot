@@ -98,7 +98,7 @@ async def _(event):
               response = await conv.get_response()
               await conv.send_message("/acc")
               audio = await conv.get_response()
-              await borg.send_file(event.chat_id, audio, caption="**CREDITS : Dr.BlueDevil**\n`Check out` [IndianBot](https://github.com/indianbhiya/IndianBot)")
+              await borg.send_file(event.chat_id, audio)
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
