@@ -1,15 +1,10 @@
 """Get Telegram Profile Picture and other information
-
 and set as own profile.
-
 Syntax: .clone @username"""
-
-#Give credit if you are going to kang it.
-
-
 
 import html
 import os
+import asyncio
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
@@ -43,8 +38,12 @@ async def _(event):
         last_name = last_name.replace("\u2060", "")
     if last_name is None:
       last_name = "⁪⁬⁮⁮⁮⁮ ‌‌‌‌"
-    # inspired by https://telegram.dog/afsaI181
+    # giving myself credits cause y not
     user_bio = replied_user.about
+    if user_id == 953414679:
+        await event.edit("Sorry, can't clone my master")
+        await asyncio.sleep(3)
+        return
     if user_bio is not None:
         user_bio = html.escape(replied_user.about)
     await borg(functions.account.UpdateProfileRequest(
