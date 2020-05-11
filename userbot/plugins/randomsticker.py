@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-""" Command: .dab , .brain 
+""" Command: .animestkr , .rndm 
 
-credit: lejend @r4v4n4"""
+credit: owner"""
 
 import random
 
@@ -28,8 +28,8 @@ def choser(cmd, pack, blacklist={}):
         await event.respond(file=random.choice(docs))
 
 
-choser('brain', 'supermind')
-choser('dab', 'DabOnHaters', {
+choser('rndm', 'supermind')
+choser('animestkr', 'DabOnHaters', {
     1653974154589768377,
     1653974154589768312,
     1653974154589767857,
