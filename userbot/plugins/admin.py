@@ -24,6 +24,7 @@ from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
 
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot 
 from userbot.utils import register, errors_handler
+from userbot.utils import admin_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
@@ -67,7 +68,8 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@register(outgoing=True, pattern="^.setgpic$")
+#@register(outgoing=True, pattern="^.setgpic$")
+@borg.on(admin_cmd(pattern=r"setgpic"))
 @errors_handler
 async def set_group_photo(gpic):
     """ For .setgpic command, changes the picture of a group """
@@ -105,7 +107,8 @@ async def set_group_photo(gpic):
             await gpic.edit(PP_ERROR)
 
 
-@register(outgoing=True, pattern="^.promote(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.promote(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"promote(?: |$)(.*)"))
 @errors_handler
 async def promote(promt):
     """ For .promote command, promotes the replied/tagged person """
@@ -156,7 +159,8 @@ async def promote(promt):
             f"CHAT: {promt.chat.title}(`{promt.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.demote(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.demote(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"demote(?: |$)(.*)"))
 @errors_handler
 async def demote(dmod):
     """ For .demote command, demotes the replied/tagged person """
@@ -206,7 +210,8 @@ async def demote(dmod):
             f"CHAT: {dmod.chat.title}(`{dmod.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.ban(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.ban(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"ban(?: |$)(.*)"))
 @errors_handler
 async def ban(bon):
     """ For .ban command, bans the replied/tagged person """
@@ -260,7 +265,8 @@ async def ban(bon):
             f"CHAT: {bon.chat.title}(`{bon.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.unban(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.unban(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"unban(?: |$)(.*)"))
 @errors_handler
 async def nothanos(unbon):
     """ For .unban command, unbans the replied/tagged person """
@@ -298,7 +304,8 @@ async def nothanos(unbon):
         await unbon.edit("`Uh oh my unban logic broke!`")
 
 
-@register(outgoing=True, pattern="^.mute(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.mute(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"mute(?: |$)(.*)"))
 @errors_handler
 async def spider(spdr):
     """
@@ -359,7 +366,8 @@ async def spider(spdr):
             return await spdr.edit("`Uh oh my mute logic broke!`")
 
 
-@register(outgoing=True, pattern="^.unmute(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.unmute(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"unmute(?: |$)(.*)"))
 @errors_handler
 async def unmoot(unmot):
     """ For .unmute command, unmute the replied/tagged person """
@@ -440,7 +448,8 @@ async def muter(moot):
             await moot.delete()
 
 
-@register(outgoing=True, pattern="^.ungmute(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.ungmute(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"ungmute(?: |$)(.*)"))
 @errors_handler
 async def ungmoot(un_gmute):
     """ For .ungmute command, ungmutes the target in the userbot """
@@ -484,7 +493,8 @@ async def ungmoot(un_gmute):
                 f"CHAT: {un_gmute.chat.title}(`{un_gmute.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.gmute(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.gmute(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"gmute(?: |$)(.*)"))
 @errors_handler
 async def gspider(gspdr):
     """ For .gmute command, globally mutes the replied/tagged person """
@@ -529,7 +539,8 @@ async def gspider(gspdr):
                 f"CHAT: {gspdr.chat.title}(`{gspdr.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.delusers(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.delusers(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"delusers(?: |$)(.*)"))
 @errors_handler
 async def rm_deletedacc(show):
     """ For .delusers command, list all the ghost/deleted accounts in a chat. """
@@ -601,7 +612,8 @@ async def rm_deletedacc(show):
             \nCHAT: {show.chat.title}(`{show.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.adminlist$")
+#@register(outgoing=True, pattern="^.adminlist$")
+@borg.on(admin_cmd(pattern=r"adminlist"))
 @errors_handler
 async def get_admin(show):
     """ For .admins command, list all of the admins of the chat. """
@@ -622,7 +634,8 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-@register(outgoing=True, pattern="^.pin(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.pin(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"pin(?: |$)(.*)"))
 @errors_handler
 async def pin(msg):
     """ For .pin command, pins the replied/tagged message on the top the chat. """
@@ -668,7 +681,8 @@ async def pin(msg):
             f"LOUD: {not is_silent}")
 
 
-@register(outgoing=True, pattern="^.kick(?: |$)(.*)")
+#@register(outgoing=True, pattern="^.kick(?: |$)(.*)")
+@borg.on(admin_cmd(pattern=r"kick(?: |$)(.*)"))
 @errors_handler
 async def kick(usr):
     """ For .kick command, kicks the replied/tagged person from the group. """
@@ -711,7 +725,8 @@ async def kick(usr):
             f"CHAT: {usr.chat.title}(`{usr.chat_id}`)\n")
 
 
-@register(outgoing=True, pattern="^.users ?(.*)")
+#@register(outgoing=True, pattern="^.users ?(.*)")
+@borg.on(admin_cmd(pattern=r"users ?(.*)"))
 @errors_handler
 async def get_users(show):
     """ For .users command, list all of the users in a chat. """
