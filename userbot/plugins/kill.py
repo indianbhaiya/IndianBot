@@ -24,6 +24,16 @@ async def _(event):
     #input_str = event.pattern_match.group(1)
 
     #if input_str == "kill":
+    
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        replied_user = await event.client(GetFullUserRequest(reply_message.from_id))
+        firstname = replied_user.user.first_name
+        usname = replied_user.user.username
+        idd = reply_message.from_id
+        if idd==953414679:
+            await event.edit("This is My Master\nI can't kill him\n**How dare you to say me to kill my master nigger!**\n\n__Your account has been blocked! Pay 1k$ to my master__ [Indian Bhai](tg://user?id=953414679) __to release your account__😏")
+        else:
 
     await event.edit("killing..")
 
