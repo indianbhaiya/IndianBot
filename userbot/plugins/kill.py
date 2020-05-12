@@ -5,7 +5,7 @@ from telethon import events
 import asyncio
 
 from uniborg.util import admin_cmd
-
+from telethon.tl.functions.users import GetFullUserRequest
 
 
 @borg.on(admin_cmd(pattern="kill"))
@@ -57,3 +57,5 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 12])
+    else:
+        await event.edit("No User is Defined\n are u dumb\n reply to a user.")
