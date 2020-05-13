@@ -1,7 +1,7 @@
 #if u steal credits u wil be the gayest gay in the world. i will fban u from 100 feds and u will leave tg
 """
 Pulls Up A Random string created by Indian Bhai.
-cmd: .hp
+cmd: .lol
     full credits : @pureindialover
 """
 from telethon import events
@@ -9,14 +9,23 @@ import asyncio
 import os
 import sys
 import random
+from uniborg.util import admin_cmd
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.lol", outgoing=True))
+@borg.on(admin_cmd(pattern=r"lol"))
+
 async def _(event):
+
     if event.fwd_from:
+
         return
-    x=(random.randrange(1,40)) 
+
+    await event.edit("Typing...")
+
+    await asyncio.sleep(2)
+    
+    x=(random.randrange(1,28))
     if (x==1):
       await event.edit(";l;;o;;l;")
     if (x==2):
