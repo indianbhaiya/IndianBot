@@ -4,7 +4,7 @@
 
 .appr <app_name>  to fetch app details with Xpl0iter request link.
 
-  Â© [cHAuHaN](http://t.me/amnd33p)"""
+"""
 
 # Ported by Poco Poco
 
@@ -122,7 +122,7 @@ async def apkr(e):
 
         app_details += "\n<code>Features :</code> <a href='"+app_link+"'>View in Play Store</a>"
 
-        app_details += "\n\n<b>Download : </b> <a href='https://t.me/IndianBot_Official'>Request_Here</a>"
+        app_details += "\n\n<b>Download : </b> <a href='https://t.me/IndianBot_Official'>Request_Here by typing #request</a>"
 
         app_details += "\n\n===> @IndianBot_Official <==="
 
