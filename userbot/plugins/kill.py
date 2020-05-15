@@ -10,7 +10,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-@borg.on(admin_cmd(pattern=r"hack"))
+@borg.on(admin_cmd(pattern=r"kill"))
 
 async def _(event):
 
