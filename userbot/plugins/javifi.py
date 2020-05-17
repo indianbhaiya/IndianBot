@@ -1,7 +1,3 @@
-
-
-
-
 import datetime
 import asyncio
 from telethon import events
@@ -105,23 +101,5 @@ async def _(event):
     else:
       await brog.send_message(event.chat_id, "**INVALID** -- FOR HELP COMMAND IS **.jav --h**")
       await event.delete()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
