@@ -3,7 +3,7 @@
 Best User Bot To Manage Your Telegram Account 😉
 ## Most PowerFul And Better And Secure !
 
-## By PeruCoders Team
+## By Team IndianBot 
 
 For any query or want to know how it works join
 ## https://t.me/IndianBot_Official
