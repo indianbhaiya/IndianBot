@@ -7,7 +7,7 @@ Best User Bot To Manage Your Telegram Account 😉
 
 # How To Deploy? ❤
 
-[![How To Deploy](https://images.app.goo.gl/7dvmcS2NJWu1ZJzG6)](https://youtu.be/0BlQ13g6Viw) 
+[![How To Deploy](https://images.app.goo.gl/7dvmcS2NJWu1ZJzG6.jpg)](https://youtu.be/0BlQ13g6Viw) 
 
 For any query or want to know how it works join
 ## https://t.me/IndianBot_Official
