@@ -1,4 +1,4 @@
-# IndianBot The UserBot
+# IndianBot The UserBot 🇮🇳
 
 <p align="center">
 <img src="logo.jpg" alt="indian Bot">
@@ -6,13 +6,13 @@
 Best User Bot To Manage Your Telegram Account 😉
 ## Most PowerFul And Better And Secure !
 
-## By Team IndianBot 
+## By Team IndianBot 🇮🇳
 
-For any query or want to know how it works join
+For any query or want to know how it works join 👉
 ## https://t.me/IndianBot_Official
 
 ## FORK AT YOUR OWN RISK !
-### Installing
+### Installing Heroku 
 
 ### The Easy Way
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/indianbhaiya/IndianBot)
