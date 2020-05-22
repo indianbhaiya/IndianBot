@@ -9,7 +9,8 @@ Best User Bot To Manage Your Telegram Account 😉
 ## By Team IndianBot 🇮🇳
 
 For any query or want to know how it works join 👉
-## https://t.me/IndianBot_Official
+## <a href="https://t.me/indianbot_official"><img src="https://img.shields.io/badge/Telegram-Group-blue.svg?logo=Telegram"></a>
+
 
 ## FORK AT YOUR OWN RISK !
 ### Installing Heroku 
