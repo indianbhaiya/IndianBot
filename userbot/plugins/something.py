@@ -45,12 +45,6 @@ async def getwell(event):
         return
     await event.edit("🌹🌹🌹🌹🌹🌹🌹🌹 \n🌹😷😢😓😷😢💨🌹\n🌹💝💉🍵💊💐💝🌹\n🌹 GetBetter Soon! 🌹\n🌹🌹🌹🌹🌹🌹🌹🌹")
 
-@borg.on(admin_cmd(pattern=r"luck"))
-async def luck(event):
-    if event.fwd_from:
-        return
-    await event.edit("💚~🍀🍀🍀🍀🍀\n🍀╔╗╔╗╔╗╦╗✨🍀\n🍀║╦║║║║║║👍🍀\n🍀╚╝╚╝╚╝╩╝。 🍀\n🍀・・ⓁⓊⒸⓀ🍀\n🍀🍀🍀 to you💚")
-
 @borg.on(admin_cmd(pattern=r"sprinkle"))
 async def sprinkle(event):
     if event.fwd_from:
