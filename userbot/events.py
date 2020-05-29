@@ -2,7 +2,8 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
-#
+
+#fix by @pureindialover
 """ Userbot module for managing events.
  One of the main components of the userbot. """
 
@@ -15,17 +16,16 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER
+from userbot import bot, PLUGIN_CHANNEL, PRIVATE_GROUP_ID
 
 
 def register(**args):
     """ Register a new event. """
     pattern = args.get('pattern', None)
     disable_edited = args.get('disable_edited', False)
-    ignore_unsafe = args.get('ignore_unsafe', False)
-    unsafe_pattern = r'^[^/!#@\$A-Za-z]'
-    groups_only = args.get('groups_only', False)
+    groups_only = args.get('groups_only', True)
     trigger_on_fwd = args.get('trigger_on_fwd', False)
+    trigger_on_inline = args.get('trigger_on_inline', False)
     disable_errors = args.get('disable_errors', False)
 
     if pattern is not None and not pattern.startswith('(?i)'):
@@ -33,9 +33,6 @@ def register(**args):
 
     if "disable_edited" in args:
         del args['disable_edited']
-
-    if "ignore_unsafe" in args:
-        del args['ignore_unsafe']
 
     if "groups_only" in args:
         del args['groups_only']
@@ -46,18 +43,20 @@ def register(**args):
     if "trigger_on_fwd" in args:
         del args['trigger_on_fwd']
 
-    if pattern:
-        if not ignore_unsafe:
-            args['pattern'] = pattern.replace('^.', unsafe_pattern, 1)
+    if "trigger_on_inline" in args:
+        del args['trigger_on_inline']
 
     def decorator(func):
         async def wrapper(check):
-            if not LOGSPAMMER:
+            if not PLUGIN_CHANNEL:
                 send_to = check.chat_id
             else:
-                send_to = BOTLOG_CHATID
+                send_to = PRIVATE_GROUP_ID
 
             if not trigger_on_fwd and check.fwd_from:
+                return
+
+            if check.via_bot_id and not trigger_on_inline:
                 return
 
             if groups_only and not check.is_group:
@@ -86,9 +85,6 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**USERBOT ERROR REPORT**\n"
-                    link = "[PaperplaneExtended Support Chat](https://t.me/PaperplaneExtendedSupport)"
-                    text += "If you want to, you can report it"
-                    text += f"- just forward this message to {link}.\n"
                     text += "Nothing is logged except the fact of error and date\n"
 
                     ftext = "========== DISCLAIMER =========="
@@ -127,11 +123,10 @@ def register(**args):
                     file.write(ftext)
                     file.close()
 
-                    if LOGSPAMMER:
-                        await check.client.respond(
-                            "`Sorry, my userbot has crashed.\
+                    if PLUGIN_CHANNEL:
+                        await check.respond("`Sorry, my userbot has some error.\
                         \nThe error logs are stored in the userbot's log chat.`"
-                        )
+                                            )
 
                     await check.client.send_file(send_to,
                                                  "error.log",
