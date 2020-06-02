@@ -98,6 +98,17 @@ async def _(event):
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
+    elif sysarg == "ccn":
+      async with borg.conversation(bot) as conv:
+          try:
+              await conv.send_message("/start")
+              response = await conv.get_response()
+              await conv.send_message("/lcc")
+              audio = await conv.get_response()
+              await borg.client.send_message(event.chat_id, audio.message)
+              await event.delete()
+          except YouBlockedUserError:
+              await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
     else:
       await brog.send_message(event.chat_id, "**INVALID** -- FOR HELP COMMAND IS **.jav --h**")
       await event.delete()
