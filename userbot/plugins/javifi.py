@@ -105,7 +105,7 @@ async def _(event):
               response = await conv.get_response()
               await conv.send_message("/lcc")
               audio = await conv.get_response()
-              await borg.client.send_message(event.chat_id, audio.message)
+              await borg.send_message(event.chat_id, audio.text)
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @indianaibot `and retry!`")
