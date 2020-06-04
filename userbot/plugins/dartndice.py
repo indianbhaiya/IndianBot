@@ -2,9 +2,9 @@ from telethon.tl.types import InputMediaDice
 from uniborg.util import admin_cmd
 
 # EMOJI CONSTANTS
-DART_E_MOJI = "dart"
-DICE_E_MOJI = "dice"
-BALL_E_MOJI = "basket"
+DART_E_MOJI = "🎯"
+DICE_E_MOJI = "🎲"
+BALL_E_MOJI = "🏀"
 # EMOJI CONSTANTS
 
 
