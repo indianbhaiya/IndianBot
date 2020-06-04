@@ -74,7 +74,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             reply_pop_up_alert = help_string
         reply_pop_up_alert += "\n Use .unload {} to remove this plugin\n\
-            © Userbot".format(plugin_name)
+            © Indianbot".format(plugin_name)
         try:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         except:
@@ -98,7 +98,7 @@ def paginate_help(page_number, loaded_plugins, prefix):
             helpable_plugins.append(p)
     helpable_plugins = sorted(helpable_plugins)
     modules = [custom.Button.inline(
-        "{} {}".format("🇮🇳", x, "🇮🇳"),
+        "{} {} {}".format("🇮🇳", x, "🇮🇳"),
         data="us_plugin_{}".format(x))
         for x in helpable_plugins]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
