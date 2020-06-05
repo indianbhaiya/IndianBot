@@ -4,7 +4,7 @@ import os
 import sys
 from uniborg.util import admin_cmd
 
-@borg.on(admin_cmd(pattern=r"test"))
+@borg.on(admin_cmd(pattern=r"test", allow_sudo=True))
 async def test(event):
     if event.fwd_from:
         return 
