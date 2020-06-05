@@ -50,14 +50,11 @@ def command(**args):
                 pass
 
         if allow_sudo:
-            args["from_users"] = list(Var.SUDO_USERS)
-            # Mutually exclusive with outgoing (can only set one of either).
-            args["incoming"] = True
-        del allow_sudo
-        try:
-            del args["allow_sudo"]
-        except:
-            pass
+        args["from_users"] = list(Config.SUDO_USERS)
+        # Mutually exclusive with outgoing (can only set one of either).
+        args["incoming"] = True
+        del args["allow_sudo"]
+        
 
         if "allow_edited_updates" in args:
             del args['allow_edited_updates']
