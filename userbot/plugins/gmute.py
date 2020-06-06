@@ -1,5 +1,6 @@
 '''
 ThankYou @pureindialover
+added speciality for sudos if u kang give me credits
 '''
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
@@ -10,6 +11,15 @@ from userbot.utils import admin_cmd
 async def startgmute(event):
     private = False
     if event.fwd_from:
+        return
+        userid = reply.sender_id
+    if user_id == (await borg.get_me()).id:
+        await event.edit(r"LoL. Why would I Gmute u. You are my owner")
+        return
+    if user_id in Config.SUDO_USERS:
+        await event.edit(
+            "**He has more power than me.**\nPerhaps I can't gmute him.\n\n"
+            "**Tip:** He iz sudo user.")
         return
     elif event.is_private:
         await event.edit("Putting Duct Tape on that person's mouth!")
