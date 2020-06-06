@@ -12,11 +12,11 @@ async def startgmute(event):
     private = False
     if event.fwd_from:
         return
-        userid = reply.sender_id
-    if user_id == (await borg.get_me()).id:
+        idd = reply_message.from_id
+    if idd == (await borg.get_me()).id:
         await event.edit(r"LoL. Why would I Gmute u. You are my owner")
         return
-    if user_id in Config.SUDO_USERS:
+    if idd in Config.SUDO_USERS:
         await event.edit(
             "**He has more power than me.**\nPerhaps I can't gmute him.\n\n"
             "**Tip:** He iz sudo user.")
