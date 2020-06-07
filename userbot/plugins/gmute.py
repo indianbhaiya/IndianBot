@@ -13,14 +13,19 @@ async def startgmute(event):
     if event.fwd_from:
         return
     reply = await event.get_reply_message()
-    user_id = reply.sender_id
+    user_id = reply.from_id
     if user_id == (await borg.get_me()).id:	
         await event.edit(r"LoL. Why would I Gmute u. You are my owner")	
         return	
     if user_id in Config.SUDO_USERS:	
         await event.edit(	
             "**He has more power than me.**\nPerhaps I can't gmute him.\n\n"	
-            "**Tip:** He iz sudo user.")	
+            "**Tip:** He iz a sudo user.")	
+        return
+    if user_id in Config.WHITELIST_USERS:	
+        await event.edit(	
+            "**He has more immunity.**\nPerhaps I can't gmute him.\n\n"	
+            "**Tip:** He iz a Whitelist user.")	
         return
     elif event.is_private:
         await event.edit("Putting Duct Tape on that person's mouth!")
