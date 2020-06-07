@@ -12,7 +12,7 @@ async def startgmute(event):
     private = False
     if event.fwd_from:
         return
-    user_id = event.from_id
+    user_id = reply.sender_id
     if user_id == (await borg.get_me()).id:	
         await event.edit(r"LoL. Why would I Gmute u. You are my owner")	
         return	
