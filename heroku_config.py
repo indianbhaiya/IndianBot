@@ -12,6 +12,10 @@ class Var(object):
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     # Here for later purposes
     SUDO_USERS = os.environ.get("SUDO_USERS", "953414679")
+    SUPPORT_USERS = os.environ.get("SUPPORT_USERS", None)
+    WHITELIST_USERS = os.environ.get("WHITELIST_USERS", None)
+    BLACKLIST_USERS = os.environ.get("BLACKLIST_USERS", None)
+    DEVLOPERS = os.environ.get("DEVLOPERS", None)
     OWNER_ID = os.environ.get("OWNER_ID", "953414679")
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
