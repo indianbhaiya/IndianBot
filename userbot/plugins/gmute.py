@@ -11,7 +11,10 @@ from telethon import events
 async def startgmute(event):
     private = False
     if event.fwd_from:
-        return
+        return 
+        user = await bot.get_me()
+    if not user.first_name:
+        user.first_name = user.id
         userid = event.from_id
     elif user_id == (await borg.get_me()).id:	
         await event.edit(r"LoL. Why would I Gmute u. You are my owner")	
