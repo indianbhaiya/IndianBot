@@ -27,6 +27,16 @@ async def startgmute(event):
             "**He has more immunity.**\nPerhaps I can't gmute him.\n\n"	
             "**Tip:** He iz a Whitelist user.")	
         return
+    if user_id in Config.SUPPORT_USERS:	
+        await event.edit(	
+            "**He has more connections.**\nPerhaps I can't gmute him.\n\n"	
+            "**Tip:** He iz a SUPPORT user.")	
+        return
+    if user_id in Config.DEVLOPERS:	
+        await event.edit(	
+            "**He my maintainer.**\nPerhaps I can't gmute him.\n\n"	
+            "**Tip:** He iz a devloper.")	
+        return
     elif event.is_private:
         await event.edit("Putting Duct Tape on that person's mouth!")
         await asyncio.sleep(3)
