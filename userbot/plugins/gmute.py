@@ -5,14 +5,14 @@ added speciality for sudos if u kang give me credits
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
 from userbot.utils import admin_cmd
-
+from telethon import events
 #@command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
         return
-        userid = event.from_id
+    userid = event.from_id
     elif user_id == (await borg.get_me()).id:	
         await event.edit(r"LoL. Why would I Gmute u. You are my owner")	
         return	
