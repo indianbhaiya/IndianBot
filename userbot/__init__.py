@@ -108,7 +108,8 @@ if bool(ENV):
     COUNTRY = str(os.environ.get("COUNTRY", "India"))
 
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
-
+    FBAN_REASON = os.environ.get("FBAN_REASON", None)
+    FBAN_USER = os.environ.get("FBAN_USER", None)
     # Clean Welcome
     CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
