@@ -13,6 +13,8 @@ class Var(object):
     # Here for later purposes
     SUDO_USERS = os.environ.get("SUDO_USERS", "953414679")
     SUPPORT_USERS = os.environ.get("SUPPORT_USERS", None)
+    FBAN_REASON = os.environ.get("FBAN_REASON", None)
+    FBAN_USER = os.environ.get("FBAN_USER", None)
     WHITELIST_USERS = os.environ.get("WHITELIST_USERS", None)
     BLACKLIST_USERS = os.environ.get("BLACKLIST_USERS", None)
     DEVLOPERS = os.environ.get("DEVLOPERS", None)
