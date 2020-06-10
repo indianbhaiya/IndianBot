@@ -56,7 +56,7 @@ async def _(event):
         packname = f"IndianBhaikeStickers"
         packshortname = "IndianBhai_ke_locker_me"
     else:
-        packname = f"{user.first_name}'s IndianBot Vol.{pack}"
+        packname = f"{DEFAULTUSER}'s IndianBot Vol.{pack}"
         packshortname = f"IndianBot_{userid}_kang"
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
@@ -71,7 +71,7 @@ async def _(event):
             packname = f"IndiaBhaikeAnimeted"
             packshortname = "IndianBhai_ke_Animated"
         else:
-            packname = f"{user.first_name}'s IndianBot Animated Vol.{pack}"
+            packname = f"{DEFAULTUSER}'s IndianBot Animated Vol.{pack}"
             packshortname = f"IndianBot_{userid}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
@@ -132,7 +132,7 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"{user.first_name}'s IndianBot Vol.{pack}"
+                    packname = f"{DEFAULTUSER}'s IndianBot Vol.{pack}"
                     packshortname = f"Vol_{pack}_with_{user.first_name}"
                     #if userid == 948408212:
                        # packname = f"{user.first_name}'s IndianBot Vol.{pack}"
