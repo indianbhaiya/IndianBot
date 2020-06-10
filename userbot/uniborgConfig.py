@@ -83,6 +83,7 @@ if ENV:
         BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", "").split())
         DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", "813878981").split())
         OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "953414679").split())
+        SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "719195224").split())
         # VeryStream only supports video formats
         VERY_STREAM_LOGIN = os.environ.get("VERY_STREAM_LOGIN", None)
         VERY_STREAM_KEY = os.environ.get("VERY_STREAM_KEY", None)
