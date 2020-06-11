@@ -72,8 +72,7 @@ async def _(event):
         parse_mode="html",
         file=tgbot_reply_message,
         link_preview=False,
-        buttons=tl_ib_buttons,
-        silent=True
+        buttons=tl_ib_buttons
     )
 
 
