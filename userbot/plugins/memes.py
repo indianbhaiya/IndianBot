@@ -588,69 +588,6 @@ CRI = [
     "༼ಢ_ಢ༽",
     "༼ ༎ຶ ෴ ༎ຶ༽",
 ]
-
-SLAP_TEMPLATES = [
-    "{hits} {victim} with a {item}.",
-    "{hits} {victim} in the face with a {item}.",
-    "{hits} {victim} around a bit with a {item}.",
-    "{throws} a {item} at {victim}.",
-    "grabs a {item} and {throws} it at {victim}'s face.",
-    "launches a {item} in {victim}'s general direction.",
-    "starts slapping {victim} silly with a {item}.",
-    "pins {victim} down and repeatedly {hits} them with a {item}.",
-    "grabs up a {item} and {hits} {victim} with it.",
-    "ties {victim} to a chair and {throws} a {item} at them.",
-    "gave a friendly push to help {victim} learn to swim in lava."
-]
-
-ITEMS = [
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "CRT monitor",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
-    "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "rubber chicken",
-    "spiked bat",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
-]
-
-THROW = [
-    "throws",
-    "flings",
-    "chucks",
-    "hurls",
-]
-
-HIT = [
-    "hits",
-    "whacks",
-    "fek ke maari",
-    "slaps",
-    "smacks",
-    "bashes",
-]
-
 # ===========================================
 
 
@@ -681,78 +618,6 @@ async def kek(keks):
             time.sleep(0.3)
             await keks.edit(":" + uio[i % 2])
 
-
-@register(pattern="^.slap(?: |$)(.*)", outgoing=True)
-async def who(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        """ slaps a user, or get slapped if not a reply. """
-        if event.fwd_from:
-            return
-
-        replied_user = await get_user(event)
-        caption = await slap(replied_user, event)
-        message_id_to_reply = event.message.reply_to_msg_id
-
-        if not message_id_to_reply:
-            message_id_to_reply = None
-
-        try:
-            await event.edit(caption)
-
-        except:
-            await event.edit("`Can't slap this person, need to fetch some sticks and stones !!`")
-
-async def get_user(event):
-    """ Get the user from argument or replied message. """
-    if event.reply_to_msg_id:
-        previous_message = await event.get_reply_message()
-        replied_user = await event.client(GetFullUserRequest(previous_message.from_id))
-    else:
-        user = event.pattern_match.group(1)
-
-        if user.isnumeric():
-            user = int(user)
-
-        if not user:
-            self_user = await event.client.get_me()
-            user = self_user.id
-
-        if event.message.entities is not None:
-            probable_user_mention_entity = event.message.entities[0]
-
-            if isinstance(probable_user_mention_entity, MessageEntityMentionName):
-                user_id = probable_user_mention_entity.user_id
-                replied_user = await event.client(GetFullUserRequest(user_id))
-                return replied_user
-        try:
-            user_object = await event.client.get_entity(user)
-            replied_user = await event.client(GetFullUserRequest(user_object.id))
-
-        except (TypeError, ValueError):
-            await event.edit("`I don't slap aliens, they ugly AF !!`")
-            return None
-
-    return replied_user
-
-async def slap(replied_user, event):
-    """ Construct a funny slap sentence !! """
-    user_id = replied_user.user.id
-    first_name = replied_user.user.first_name
-    username = replied_user.user.username
-
-    if username:
-        slapped = "@{}".format(username)
-    else:
-        slapped = f"[{first_name}](tg://user?id={user_id})"
-
-    temp = random.choice(SLAP_TEMPLATES)
-    item = random.choice(ITEMS)
-    hit = random.choice(HIT)
-    throw = random.choice(THROW)
-
-    caption = "..." + temp.format(victim=slapped, item=item, hits=hit, throws=throw)
-
-    return caption
 
 @register(outgoing=True, pattern="^.-_-$")
 async def lol(lel):
@@ -1204,8 +1069,6 @@ CMD_HELP.update({
 \nUsage: UwU\
 \n\n.react\
 \nUsage: Make your userbot react to everything.\
-\n\n.slap\
-\nUsage: reply to slap them with random objects !!\
 \n\n.cry\
 \nUsage: y u du dis, i cri.\
 \n\n.shg\
