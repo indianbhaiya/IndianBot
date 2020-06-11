@@ -94,7 +94,7 @@
     },
     "TZ": {
       "description": "Required for Correct Time on autopic",
-      "value": "",
+      "value": "Asia/Kolkata",
       "required": false
     }
   },
