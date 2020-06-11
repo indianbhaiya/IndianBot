@@ -133,7 +133,7 @@ async def _(event):
                     pack += 1
                     prevv = int(pack) - 1
                     packname = f"{DEFAULTUSER}'s IndianBot Vol.{pack}"
-                    packshortname = f"Vol_{pack}_with_{user.first_name}"
+                    packshortname = f"Vol_{pack}_with_{userid}"
                     #if userid == 948408212:
                        # packname = f"{user.first_name}'s IndianBot Vol.{pack}"
                        # packshortname = "Vol._{pack}_IndianBhai_ke_locker_me"
