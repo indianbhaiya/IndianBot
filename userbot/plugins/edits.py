@@ -1,8 +1,8 @@
-# (c) @TeleBotHelp @IndianBot_Official
+# (c) @TeleBotHelp and @IndianBot_Official
 # By @xditya. Kangers keep credits xD
 # All in one code.
 
-"""TeleBot_IndianBot
+"""TeleBot
 Available Commands:
 .tlol
 .lol
@@ -21,7 +21,7 @@ async def _(event):
 		return
 	deq = deque(list("🍦🍧🍩🍪🎂🍰🧁🍫🍬🍭"))
 	for _ in range(999):
-		await asyncio.sleep(0.1)
+		await asyncio.sleep(1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
     
@@ -31,7 +31,7 @@ async def _(event):
 		return
 	deq = deque(list("😁☹️😁☹️😁☹️😁"))
 	for _ in range(999):
-		await asyncio.sleep(0.1)
+		await asyncio.sleep(1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
 
@@ -41,7 +41,7 @@ async def _(event):
 		return
 	deq = deque(list("❤️🧡💛💚💙💜🖤"))
 	for _ in range(999):
-		await asyncio.sleep(0.1)
+		await asyncio.sleep(1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
     
@@ -51,17 +51,17 @@ async def _(event):
 		return
 	deq = deque(list("🤔🧐🤨🤔🧐🤨"))
 	for _ in range(999):
-		await asyncio.sleep(0.1)
+		await asyncio.sleep(1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
     
-@borg.on(admin_cmd(pattern=r"lol2"))
+@borg.on(admin_cmd(pattern=r"lol"))
 async def _(event):
 	if event.fwd_from:
 		return
 	deq = deque(list("😂🤣😂🤣😂🤣"))
 	for _ in range(999):
-		await asyncio.sleep(0.1)
+		await asyncio.sleep(1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
     
