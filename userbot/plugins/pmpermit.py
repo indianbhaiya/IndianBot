@@ -4,22 +4,21 @@ import io
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
-from userbot import ALIVE_NAME
+from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
 from userbot.utils import admin_cmd
 
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
-
+MESAG = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "`🔶I Am :` **☣HOT🔥**\n\n**This Is Regarded As Illegal And A Crime😬**\n\n"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` "
 USER_BOT_NO_WARN = ("[──▄█▀█▄─────────██ \n▄████████▄───▄▀█▄▄▄▄ \n██▀▼▼▼▼▼─▄▀──█▄▄ \n█████▄▲▲▲─▄▄▄▀───▀▄ \n██████▀▀▀▀─▀────────▀▀](tg://user?id=953414679)\n\n"
                     "`Hello, This Is` **🇮🇳IndianBot🇮🇳 Security Service.**\n"
                     "**I Am Made By A Pro, I Found Ur Way Through "
                     f"{DEFAULTUSER}'s inbox**.\n\n"
-                    "`🔶I Am :` **☣HOT🔥**\n\n"
-                    "**This Is Regarded As Illegal And A Crime😬**\n\n"
-                    "** So Send `/start` To Start A Valid Conversation. **")
+                    f"{MESAG}"
+                    "**So Send `/start` To Start A Valid Conversation.**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
