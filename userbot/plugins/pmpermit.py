@@ -10,7 +10,7 @@ from userbot.utils import admin_cmd
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
-MESAG = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "`🔶I Am :` **☣HOT🔥**\n\n**This Is Regarded As Illegal And A Crime😬**\n\n"
+MESAG = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "`🔶I Am :` **☣HOT🔥**\n\n**This Is Regarded As Illegal And A Crime😬**"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` "
 USER_BOT_NO_WARN = ("[──▄█▀█▄─────────██ \n▄████████▄───▄▀█▄▄▄▄ \n██▀▼▼▼▼▼─▄▀──█▄▄ \n█████▄▲▲▲─▄▄▄▀───▀▄ \n██████▀▀▀▀─▀────────▀▀](tg://user?id=953414679)\n\n"
@@ -18,7 +18,7 @@ USER_BOT_NO_WARN = ("[──▄█▀█▄─────────██ \n�
                     "**I Am Made By A Pro, I Found Ur Way Through "
                     f"{DEFAULTUSER}'s inbox**.\n\n"
                     f"{MESAG}"
-                    "**So Send `/start` To Start A Valid Conversation.**")
+                    "\n\n**So Send `/start` To Start A Valid Conversation.**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
