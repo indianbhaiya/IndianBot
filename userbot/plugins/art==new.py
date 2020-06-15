@@ -11,7 +11,7 @@ n = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 #@command(outgoing=True, pattern="^.ded$")
 @borg.on(admin_cmd(pattern=r"ded"))
 async def bluedevilded(ded):
-    await ded.edit("I ==             |\n　　　　　|" "\n　　　　　| \n"
+    await ded.edit(n + " ==             |\n　　　　　|" "\n　　　　　| \n"
 "　　　　　| \n"
 "　　　　　| \n"
 "　　　　　| \n"
