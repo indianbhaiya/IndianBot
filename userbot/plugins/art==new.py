@@ -24,3 +24,15 @@ async def bluedevilded(ded):
 "＜ 、･　　|　　＼ \n"
 "　＼＿＿／∪ _ ∪) \n"
 "　　　　　 Ｕ Ｕ\n")
+
+M = ("▄███████▄\n"
+"█▄█████▄█\n"
+"█▼▼▼▼▼█\n"
+"██________█▌\n"
+"█▲▲▲▲▲█\n"
+"█████████\n"
+"_████\n")
+
+@borg.on(admin_cmd(pattern=r"monster"))
+async def bluedevilmonster(monster):
+    await .edit(M)
