@@ -57,9 +57,9 @@ async def bluedevilmonster(monster):
 @borg.on(admin_cmd(pattern=r"pig"))
 async def bluedevipig(pig):
     await pig.edit(P)
-@borg.on(admin_cmd(pattern=r"killer"))
-async def bluedevikiller(killer):
-    await killer.edit(K)
+@borg.on(admin_cmd(pattern=r"kiler"))
+async def bluedevikiller(kiler):
+    await kiler.edit(K)
 @borg.on(admin_cmd(pattern=r"gun"))
 async def bluedevigun(gun):
     await gun.edit(G)
