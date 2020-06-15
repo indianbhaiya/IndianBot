@@ -50,7 +50,12 @@ G = ("........___________________\n"
 ".....), -.(_(__) /\n"
 "....// (..) ), —\n"
 "...//___//\n")
-
+D = ("╥━━━━━━━━╭━━╮━━┳\n"
+"╢╭╮╭━━━━━┫┃▋▋━▅┣\n"
+"╢┃╰┫┈┈┈┈┈┃┃┈┈╰┫┣\n"
+"╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣\n"
+"╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣\n"
+"╨━━┗┛┗┛━━┗┛┗┛━━┻\n")
 @borg.on(admin_cmd(pattern=r"monster"))
 async def bluedevilmonster(monster):
     await monster.edit(M)
@@ -63,3 +68,6 @@ async def bluedevikiller(kiler):
 @borg.on(admin_cmd(pattern=r"gun"))
 async def bluedevigun(gun):
     await gun.edit(G)
+@borg.on(admin_cmd(pattern=r"dog"))
+async def bluedevidog(dog):
+    await dog.edit(D)
