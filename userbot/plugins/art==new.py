@@ -32,7 +32,18 @@ M = ("▄███████▄\n"
 "█▲▲▲▲▲█\n"
 "█████████\n"
 "_████\n")
+P = ("┈┈┏━╮╭━┓┈╭━━━━╮\n"
+"┈┈┃┏┗┛┓┃╭┫ⓞⓘⓝⓚ┃\n"
+"┈┈╰┓▋▋┏╯╯╰━━━━╯\n"
+"┈╭━┻╮╲┗━━━━╮╭╮┈\n"
+"┈┃▎▎┃╲╲╲╲╲╲┣━╯┈\n"
+"┈╰━┳┻▅╯╲╲╲╲┃┈┈┈\n"
+"┈┈┈╰━┳┓┏┳┓┏╯┈┈┈\n"
+"┈┈┈┈┈┗┻┛┗┻┛┈┈┈┈\n")
 
 @borg.on(admin_cmd(pattern=r"monster"))
 async def bluedevilmonster(monster):
-    await .edit(M)
+    await monster.edit(M)
+@borg.on(admin_cmd(pattern=r"pig"))
+async def bluedevipig(pig):
+    await pig.edit(P)
