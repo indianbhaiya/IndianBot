@@ -101,7 +101,8 @@
       "description": "UR FEDRATION FROM ROSE",
       "value": "",
       "required": false
-    },
+    }
+  },
   "addons": [{
     "plan": "heroku-postgresql",
     "options": {
