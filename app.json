@@ -96,8 +96,12 @@
       "description": "Required for Correct Time on autopic",
       "value": "Asia/Kolkata",
       "required": false
-    }
-  },
+    },
+    "FED": {
+      "description": "UR FEDRATION FROM ROSE",
+      "value": "",
+      "required": false
+    },
   "addons": [{
     "plan": "heroku-postgresql",
     "options": {
