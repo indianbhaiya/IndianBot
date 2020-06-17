@@ -24,7 +24,7 @@
     },
     "ALIVE_NAME": {
       "description": "Fill your Full name or Username.",
-      "value": ""
+      "value": "[#UR-NAME#](t.me/#UR-USERBAME#)🇮🇳"
     },
     "APP_ID": {
       "description": "Get this value from my.telegram.org! Please do not steal",
