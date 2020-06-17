@@ -19,6 +19,7 @@ class Var(object):
     SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "719195224").split())
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
+    F = os.environ.get("FED", None) 
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     TG_BOT_TOKEN_BF_HER = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
