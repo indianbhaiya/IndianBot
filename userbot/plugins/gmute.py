@@ -56,7 +56,7 @@ async def startgmute(event):
         return await event.edit("Duct Tape is already availabe on this user's mouth")
     try:
         mute(userid, "gmute")
-    else
+    else:
         await event.edit("Successfully putted Duct Tape on that person's mouth")
 
 #@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
