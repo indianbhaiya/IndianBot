@@ -58,7 +58,7 @@ async def startgmute(event):
         mute(userid, "gmute")
     else:
         await event.edit("Successfully putted Duct Tape on that person's mouth")
-
+        
 #@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
 async def endgmute(event):
