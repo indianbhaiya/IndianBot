@@ -56,9 +56,11 @@ async def startgmute(event):
         return await event.edit("Duct Tape is already availabe on this user's mouth")
     try:
         mute(userid, "gmute")
+    except Exception as e:
+        await event.edit("Error occured!\nError is " + str(e))
     else:
         await event.edit("Successfully putted Duct Tape on that person's mouth")
-        
+
 #@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
 async def endgmute(event):
@@ -83,6 +85,8 @@ async def endgmute(event):
         return await event.edit("Duct Tape is not on this user's mouth")
     try:
         unmute(userid, "gmute")
+    except Exception as e:
+        await event.edit("Error occured!\nError is " + str(e))
     else:
         await event.edit("Successfully Removed Duct Tape from that person's mouth")
         
