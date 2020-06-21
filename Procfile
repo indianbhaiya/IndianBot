@@ -1,1 +1,1 @@
-userbot: python -m IndianBot
+IndianBot: python -m userbot
