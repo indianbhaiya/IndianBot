@@ -10,8 +10,8 @@ from userbot import ALIVE_NAME
 
 naam = str(ALIVE_NAME)
 
-bot = "@indianaibot"
-bluebot = "@EASY12DEVIL_BOT"
+oldbot = "@indianaibot"
+bot = "@EASY12DEVIL_BOT"
 freebot = "@freeusersbot"
 
 
@@ -21,14 +21,14 @@ async def _(event):
         return
     sysarg = event.pattern_match.group(1)
     
-    if sysarg == "h":
+    if sysarg == "hello":
       async with borg.conversation(bot) as conv:
           try:
               await conv.send_message("/start")
               response = await conv.get_response()
               await conv.send_message("/hello")
               audio = await conv.get_response()
-              await borg.send_file(event.chat_id, audio, caption="🔰**TO BOSS : **" + naam +"\n`Check out` [IndianBot](https://github.com/indianbhiya/IndianBot)")
+              await borg.send_file(event.chat_id, audio, caption="🔰**HI BOSS : **" + naam +"\n`Check out` [IndianBot](https://github.com/indianbhiya/IndianBot)")
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @indianaibot `and retry!")
