@@ -10,10 +10,10 @@ import asyncio
 
 from uniborg.util import admin_cmd
 
-from userbot import ALIVE_NAME
+from userbot import AUTONAME
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set vars from heroku"
+DEFAULTUSER = str(AUTONAME) if AUTONAME else "IndianBot"
 
 @borg.on(admin_cmd(pattern=r"deploy"))
 
@@ -23,7 +23,7 @@ async def _(event):
 
         return
 
-    animation_interval = 5
+    animation_interval = 10
 
     animation_ttl = range(0, 12)
 
@@ -37,7 +37,7 @@ async def _(event):
         
             "**Heroku Connecting To Latest Github Build (indianbhaiya/IndianBot)**",
             "**Build started by user** **{DEFAULTUSER}**",
-            f"**Deploy** `535a74f0` **by user** **{DEFAULTUSER}**",
+            "**Deploy** `535a74f0` **by user** **{DEFAULTUSER}**",
             "**Restarting Heroku Server...**",
             "**State changed from up to starting**",    
             "**Stopping all processes with SIGTERM**",
@@ -53,4 +53,5 @@ async def _(event):
     for i in animation_ttl:
 
             await asyncio.sleep(animation_interval)
+
             await event.edit(animation_chars[i % 12])

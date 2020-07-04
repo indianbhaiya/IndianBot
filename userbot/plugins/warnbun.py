@@ -1,4 +1,4 @@
-""".admin Plugin for @IndianBot_Official"""
+""".admin Plugin for @UniBorg"""
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -21,7 +21,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-""".admin Plugin for @IndianBot_Official"""
+""".admin Plugin for @UniBorg"""
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -90,11 +90,11 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-""".admin Plugin for @IndianBot_Official"""
+""".admin Plugin for @UniBorg"""
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot.utils import admin_cmd
+from uniborg.util import admin_cmd
 
 
 

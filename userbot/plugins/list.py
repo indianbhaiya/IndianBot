@@ -7,7 +7,7 @@ By:- @Zero_cool7870
 
 """
 
-from userbot.utils import admin_cmd
+from uniborg.util import admin_cmd
 import asyncio
 import os
 
