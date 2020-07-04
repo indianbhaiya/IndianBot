@@ -1,9 +1,10 @@
-
+# (c) @UniBorg
+# Original written by @UniBorg edit by @I_m_Rock
 
 from telethon import events
 import asyncio
 from collections import deque
-from userbot.utils import admin_cmd
+from uniborg.util import admin_cmd
 
 @borg.on(admin_cmd(pattern="earth"))
 async def _(event):
