@@ -2,13 +2,7 @@
   "name": "IndianBot",
   "description": "Userbot created by a IndianBhai and join https://t.me/IndianArMyGiveaway for any problems or support",
   "logo": "https://telegra.ph/file/b6cd017959adc2814db5f.jpg",
-  "keywords": [
-    "telegram",
-    "userbot",
-    "plugin",
-    "modular",
-    "productivity"
-  ],
+  "keywords": ["telegram", "userbot", "plugin", "modular", "productivity"],
   "repository": "https://github.com/indianbhaiya/IndianBot/",
   "website": "#TODO",
   "success_url": "#TODO",
