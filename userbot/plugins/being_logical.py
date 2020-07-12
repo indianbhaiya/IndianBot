@@ -3,16 +3,12 @@ Say something interesting...
 Syntax: .belo
 """
 
-from telethon import events
-
 import asyncio
-
 import os
-
+import random
 import sys
 
-import random
-
+from telethon import events
 from userbot.utils import admin_cmd
 
 
