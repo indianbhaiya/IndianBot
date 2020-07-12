@@ -1,8 +1,6 @@
 """
 Say something interesting...
 Syntax: .belo
-    by @Deonnn
-Quotes credits: Being logical Channel
 """
 
 from telethon import events
@@ -15,7 +13,7 @@ import sys
 
 import random
 
-from uniborg.util import admin_cmd
+from userbot.utils import admin_cmd
 
 
 
