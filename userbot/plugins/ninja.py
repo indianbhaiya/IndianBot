@@ -1,13 +1,11 @@
-# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#for indianbot
 
 import asyncio
 
 from telethon import events
 import telethon.utils
 
-from uniborg.util import admin_cmd,re
+from userbot.utils import admin_cmd,re
 
 
 async def get_target_message(event):
