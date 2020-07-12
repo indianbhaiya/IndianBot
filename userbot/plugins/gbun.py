@@ -1,4 +1,5 @@
 # This is a troll indeed ffs *facepalm*
+#sed lyf
 import asyncio
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
