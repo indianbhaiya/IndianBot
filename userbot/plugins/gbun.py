@@ -1,5 +1,5 @@
 # This is a troll indeed ffs *facepalm*
-#sed lyf
+# sed lyf
 import asyncio
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
@@ -31,12 +31,12 @@ async def gbun(event):
         if idd == 953414679:
             await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ [Indian Bhai](tg://user?id=953414679) __to release your account__😏")
         else:
-            jnl=("`Warning!! `"
-                  "[{}](tg://user?id={})"
-                  "` 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n\n`"
-                  "**Person's Name: ** __{}__\n"
-                  "**ID : ** `{}`\n"
-                ).format(firstname, idd, firstname, idd)
+            jnl = ("`Warning!! `"
+                   "[{}](tg://user?id={})"
+                   "` 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n\n`"
+                   "**Person's Name: ** __{}__\n"
+                   "**ID : ** `{}`\n"
+                   ).format(firstname, idd, firstname, idd)
             if usname == None:
                 jnl += "**Victim Nigga's username: ** `Doesn't own a username!`\n"
             elif usname != "None":

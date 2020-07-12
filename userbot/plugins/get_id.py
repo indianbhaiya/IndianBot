@@ -1,5 +1,6 @@
 """Get ID of any Telegram media, or any user
 Syntax: .get_id"""
+from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
 from telethon import events
 from telethon.utils import pack_bot_file_id
 from userbot.utils import admin_cmd
@@ -19,13 +20,10 @@ async def _(event):
             await event.edit("Current Chat ID: `{}`\nFrom User ID: `{}`".format(str(event.chat_id), str(r_msg.from_id)))
     else:
         await event.edit("Current Chat ID: `{}`".format(str(event.chat_id)))
-       
-    
+
+
 """ Get the Bots in any chat*
 Syntax: .get_bot"""
-from telethon import events
-from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
-from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd("get_bot ?(.*)"))
@@ -48,10 +46,11 @@ async def _(event):
     try:
         async for x in borg.iter_participants(chat, filter=ChannelParticipantsBots):
             if isinstance(x.participant, ChannelParticipantAdmin):
-                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
+                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(
+                    x.first_name, x.id, x.id)
             else:
-                mentions += "\n [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
+                mentions += "\n [{}](tg://user?id={}) `{}`".format(
+                    x.first_name, x.id, x.id)
     except Exception as e:
         mentions += " " + str(e) + "\n"
     await event.edit(mentions)
-

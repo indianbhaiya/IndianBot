@@ -1,11 +1,11 @@
-#for indianbot
+# for indianbot
 
 import asyncio
 
 from telethon import events
 import telethon.utils
 
-from userbot.utils import admin_cmd,re
+from userbot.utils import admin_cmd, re
 
 
 async def get_target_message(event):
