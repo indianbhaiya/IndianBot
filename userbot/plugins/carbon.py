@@ -8,7 +8,6 @@ from re import findall
 from time import sleep
 from urllib.error import HTTPError
 from urllib.parse import quote_plus
-
 from bs4 import BeautifulSoup
 from emoji import get_emoji_regexp
 from google_images_download import google_images_download
@@ -36,7 +35,6 @@ CARBONLANG = "auto"
 LANG = "en"
 @register(outgoing=True, pattern="^.carbon")
 async def carbon_api(e):
-
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         """ A Wrapper for carbon.now.sh """
         await e.edit("`Processing..`")
