@@ -35,7 +35,7 @@ def carbon_lago():
             '████████████              ██    ██    ████████████ █████████ █      ██\n'
             '██████████████████████████████████████████████████████████████████████\n')
     print(f'{logo}')
-@borg.on(admin_cmd("nbon")) # This Is The Command Recogniser , This Has Been Changed To Borg.on From Register
+@borg.on(admin_cmd("carbon")) # This Is The Command Recogniser , This Has Been Changed To Borg.on From Register
 async def carbon_api(mytext):
     carbon_lago()
     if not mytext.text[0].isalpha() and mytext.text[0] not in ("/", "#", "@", "!"): # Checking For Alpha Or Not
