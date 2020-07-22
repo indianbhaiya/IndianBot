@@ -59,9 +59,9 @@ async def pmpermit_ka_menu(event):
             elif "2" in y:
                 await borg.send_message(chat, TWO)
                 async with borg.conversation('@chalhatibhenkilodibot') as n:
-                    await n.send_message(chat, '/start')
+                    await n.send_message('/start')
                     s(1)
-                    await n.send_message(chat, '/sendmethesong')
+                    await n.send_message('/sendmethesong')
                     a = await n.get_response()
                     await borg.send_message(chat , a)
                 await event.client(functions.contacts.BlockRequest(chat_id))
