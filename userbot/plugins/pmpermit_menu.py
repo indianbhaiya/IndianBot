@@ -39,6 +39,7 @@ async def pmpermit_ka_menu(event):
         async with borg.conversation(chat) as conv:
             await borg.send_message(chat, PM)
             chat_id = event.from_id
+            s(7)
             r = await conv.get_response(chat)
             y = r.text
             if '1' in y:
