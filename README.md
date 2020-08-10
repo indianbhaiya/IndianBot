@@ -22,8 +22,8 @@ For any query or want to know how it works join 👇👇
 )
 
 ## GET STRING SESSION FROM REPL RUN 
-
-[![Repl.it](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg)](https://indianbotstringsetup.pureindialover.repl.run)
+### <a href="https://indianbotstringsetup.pureindialover.repl.run"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(9).png"></a>
+)
 
 ### The Normal Way
 
