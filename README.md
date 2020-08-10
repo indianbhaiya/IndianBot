@@ -6,11 +6,8 @@
 Best User Bot To Manage Your Telegram Account 😉
 ## Most PowerFul And Better And Secure !
 
-## By Team IndianBot 🇮🇳
-
 For any query or want to know how it works join 👇👇
 ### <a href="https://t.me/indianbot_official"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(7).png"></a>
-
 
 
 ## FORK AT YOUR OWN RISK !
@@ -18,12 +15,11 @@ For any query or want to know how it works join 👇👇
 
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/usersec.png">
-# <a href="https://heroku.com/deploy?template=https://github.com/indianbhaiya/IndianBot"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(8).png"></a>
 
+# <a href="https://heroku.com/deploy?template=https://github.com/indianbhaiya/IndianBot"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(8).png"></a>
 
 ## GET STRING SESSION FROM REPL RUN 
 ### <a href="https://indianbotstringsetup.pureindialover.repl.run"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(9).png"></a>
-
 
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/devsec.png">
