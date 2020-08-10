@@ -1,5 +1,6 @@
 <p align="center">
-<img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/newlogo.png" alt="indian Bot">
+<img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/newlogo.png">
+
 # IndianBot The UserBot 🇮🇳
 # Will Re-Start Again In 1 Week!!
 
