@@ -18,11 +18,11 @@ For any query or want to know how it works join 👇👇
 
 # For Regular Users
 ### <a href="https://heroku.com/deploy?template=https://github.com/indianbhaiya/IndianBot"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(8).png"></a>
-)
+
 
 ## GET STRING SESSION FROM REPL RUN 
 ### <a href="https://indianbotstringsetup.pureindialover.repl.run"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(9).png"></a>
-)
+
 
 # For Developers
 
