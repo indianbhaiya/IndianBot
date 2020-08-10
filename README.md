@@ -15,9 +15,8 @@ For any query or want to know how it works join 👇👇
 
 ## FORK AT YOUR OWN RISK !
 ## Don't Forget To Give A Star ⭐
-### Installing Heroku 
 
-### The Easy Way
+### For Regular Users
 ### <a href="https://heroku.com/deploy?template=https://github.com/indianbhaiya/IndianBot"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(8).png"></a>
 )
 
@@ -25,7 +24,7 @@ For any query or want to know how it works join 👇👇
 ### <a href="https://indianbotstringsetup.pureindialover.repl.run"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(9).png"></a>
 )
 
-### The Normal Way
+##  For Developers
 
 Simply clone the repository and run the main file:
 ```sh
