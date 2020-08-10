@@ -24,7 +24,8 @@ For any query or want to know how it works join 👇👇
 ### <a href="https://indianbotstringsetup.pureindialover.repl.run"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(9).png"></a>
 
 
-# For Developers
+<p align="center">
+<img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/devsec.png">
 
 Simply clone the repository and run the main file:
 ```bash
