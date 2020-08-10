@@ -16,8 +16,9 @@ For any query or want to know how it works join 👇👇
 ## FORK AT YOUR OWN RISK !
 ## Don't Forget To Give A Star ⭐
 
-# For Regular Users
-### <a href="https://heroku.com/deploy?template=https://github.com/indianbhaiya/IndianBot"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(8).png"></a>
+<p align="center">
+<img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/usersec.png">
+# <a href="https://heroku.com/deploy?template=https://github.com/indianbhaiya/IndianBot"><img src="https://raw.githubusercontent.com/indianbhaiya/IndianBot/master/.github/button%20(8).png"></a>
 
 
 ## GET STRING SESSION FROM REPL RUN 
