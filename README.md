@@ -1,5 +1,5 @@
 # IndianBot The UserBot 🇮🇳
-# Temporarily Down!!
+# Will Re-Start Again In 1 Week!!
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/newlogo.png" alt="indian Bot">
 
@@ -48,8 +48,10 @@ __The Userbot should work by setting only the first two variables__
 from heroku_config import Var
 
 class Development(Var):
-  APP_ID = 6
-  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+  APP_ID = 6 
+  # 6 is the length of api id
+  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e" 
+  # Use Your Own Api Hash
 ```
 
 ### UniBorg Configuration
