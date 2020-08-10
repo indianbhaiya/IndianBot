@@ -1,7 +1,7 @@
 # IndianBot The UserBot 🇮🇳
 # Temporarily Down!!
 <p align="center">
-<img src="logo.jpg" alt="indian Bot">
+<img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/newlogo.png" alt="indian Bot">
 
 Best User Bot To Manage Your Telegram Account 😉
 ## Most PowerFul And Better And Secure !
