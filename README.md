@@ -1,7 +1,7 @@
-# IndianBot The UserBot 🇮🇳
-# Will Re-Start Again In 1 Week!!
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/newlogo.png" alt="indian Bot">
+# IndianBot The UserBot 🇮🇳
+# Will Re-Start Again In 1 Week!!
 
 Best User Bot To Manage Your Telegram Account 😉
 ## Most PowerFul And Better And Secure !
