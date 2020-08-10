@@ -27,7 +27,7 @@ For any query or want to know how it works join 👇👇
 # For Developers
 
 Simply clone the repository and run the main file:
-```sh
+```bash
 git clone https://github.com/indianbhaiya/IndianBot
 cd Indianbot
 virtualenv -p /usr/bin/python3 venv
