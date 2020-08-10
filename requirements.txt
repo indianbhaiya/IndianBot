@@ -1,3 +1,4 @@
+git+https://github.com/pyrogram/pyrogram.git@asyncio-dev
 telethon>=1.10.3
 Pillow>=5.3.0
 PyGithub
