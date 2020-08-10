@@ -70,7 +70,9 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 - The userbot will not work without setting the mandatory vars.
 
 
-# LICENSE
+<p align="center">
+<img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/lic.png">
+  
 ```Python3
 MIT License
 
