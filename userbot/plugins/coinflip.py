@@ -1,7 +1,6 @@
-"""CoinFlip for @UniBorg
+"""CoinFlip for @IndianBot
 Syntax: .coinflip [optional_choice]"""
-from telethon import events
-import random, re
+import random
 from uniborg.util import admin_cmd
 
 
