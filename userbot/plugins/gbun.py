@@ -1,14 +1,7 @@
-# This is a troll indeed ffs *facepalm*
-# sed lyf
 import asyncio
-
-from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
-
 from userbot.utils import admin_cmd
-
-
 @borg.on(admin_cmd("gbun"))
 async def gbun(event):
     if event.fwd_from:
@@ -42,7 +35,7 @@ async def gbun(event):
                    "` 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n\n`"
                    "**Person's Name: ** __{}__\n"
                    "**ID : ** `{}`\n").format(firstname, idd, firstname, idd)
-            if usname == None:
+            if usname is None:
                 jnl += "**Victim Nigga's username: ** `Doesn't own a username!`\n"
             elif usname != "None":
                 jnl += "**Victim Nigga's username** : @{}\n".format(usname)
