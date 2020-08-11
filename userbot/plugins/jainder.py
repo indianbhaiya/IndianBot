@@ -1,11 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-from telethon import events
 import random
-import asyncio
 from uniborg.util import admin_cmd
-
 @borg.on(admin_cmd(pattern=r"jainder(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -18,16 +12,14 @@ async def _(event):
             "u is aurat",
             "u is woman",
             "u is gey",
-            "u is chakka",
-        ]
+            "u is chakka"]
     elif input_str in "thinking":
         emoticons = [
             "(҂⌣̀_⌣́)",
             "（；¬＿¬)",
             "(-｡-;",
             "┌[ O ʖ̯ O ]┐",
-            "〳 ͡° Ĺ̯ ͡° 〵",
-        ]
+            "〳 ͡° Ĺ̯ ͡° 〵"]
     elif input_str in "waving":
         emoticons = [
             "(ノ^∇^)",
@@ -36,8 +28,7 @@ async def _(event):
             "ヾ(＾-＾)ノ",
             "ヾ(◍’౪◍)ﾉﾞ♡",
             "(ό‿ὸ)ﾉ",
-            "(ヾ(´・ω・｀)",
-        ]
+            "(ヾ(´・ω・｀)"]
     elif input_str in "wtf":
         emoticons = [
             "༎ຶ‿༎ຶ",
@@ -45,16 +36,14 @@ async def _(event):
             "╰U╯☜(◉ɷ◉ )",
             "(;´༎ຶ益༎ຶ)♡",
             "╭∩╮(︶ε︶*)chu",
-            "( ＾◡＾)っ (‿|‿)",
-        ]
+            "( ＾◡＾)っ (‿|‿)"]
     elif input_str in "love":
         emoticons = [
             "乂❤‿❤乂",
             "(｡♥‿♥｡)",
             "( ͡~ ͜ʖ ͡°)",
             "໒( ♥ ◡ ♥ )७",
-            "༼♥ل͜♥༽",
-        ]
+            "༼♥ل͜♥༽"]
     elif input_str in "confused":
         emoticons = [
             "(・_・ヾ",
@@ -62,16 +51,14 @@ async def _(event):
             "﴾͡๏̯͡๏﴿",
             "(￣■￣;)!?",
             "▐ ˵ ͠° (oo) °͠ ˵ ▐",
-            "(-_-)ゞ゛",
-        ]
+            "(-_-)ゞ゛"]
     elif input_str in "dead":
         emoticons = [
             "(✖╭╮✖)",
             "✖‿✖",
             "(+_+)",
             "(✖﹏✖)",
-            "∑(✘Д✘๑)",
-        ]
+            "∑(✘Д✘๑)"]
     elif input_str in "sad":
         emoticons = [
             "(＠´＿｀＠)",
@@ -79,13 +66,11 @@ async def _(event):
             "(▰˘︹˘▰)",
             "●︿●",
             "(　´_ﾉ` )",
-            "彡(-_-;)彡",
-        ]
+            "彡(-_-;)彡"]
     elif input_str in "dog":
         emoticons = [
             "-ᄒᴥᄒ-",
-            "◖⚆ᴥ⚆◗",
-        ]
+            "◖⚆ᴥ⚆◗"]
     else:    
         emoticons = [
             "( ͡° ͜ʖ ͡°)",
@@ -98,8 +83,7 @@ async def _(event):
             "ಠ_ಠ",
             "(☞ ͡° ͜ʖ ͡°)☞",
             "¯\_༼ ି ~ ି ༽_/¯",
-            "c༼ ͡° ͜ʖ ͡° ༽⊃",
-        ]
+            "c༼ ͡° ͜ʖ ͡° ༽⊃"]
     index = random.randint(0, len(emoticons))
     output_str = emoticons[index]
     await event.edit(output_str)
