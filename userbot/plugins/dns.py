@@ -1,13 +1,10 @@
-"""DA.GD helpers in @UniBorg
+"""Pro helpers in @Indian_Bot
 Available Commands:
 .isup URL
 .dns google.com
 .url <long url>
 .unshort <short url>"""
-from telethon import events
-import os
 import requests
-import json
 from userbot.utils import admin_cmd
 
 
