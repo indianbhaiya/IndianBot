@@ -3,16 +3,11 @@ and set as own profile.
 Syntax: .clone @username"""
 
 import html
-import os
 import asyncio
-from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
-from telethon.utils import get_input_location
 from userbot.utils import admin_cmd
 from telethon.tl import functions
-
-
 @borg.on(admin_cmd(pattern="clone ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -60,10 +55,10 @@ async def _(event):
     await borg(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
         pfile
     ))
-    #message_id_to_reply = event.message.reply_to_msg_id
-    #if not message_id_to_reply:
+    # message_id_to_reply = event.message.reply_to_msg_id
+    # if not message_id_to_reply:
     #    message_id_to_reply = event.message.id
-    #await borg.send_message(
+    # await borg.send_message(
     #  event.chat_id,
     #  "Hey ? Whats Up !",
     #  reply_to=message_id_to_reply,
@@ -74,7 +69,6 @@ async def _(event):
       "**LET US BE AS ONE**",
       reply_to=reply_message
       )
-
 async def get_full_user(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
