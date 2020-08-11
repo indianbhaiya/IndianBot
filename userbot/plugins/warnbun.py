@@ -1,9 +1,5 @@
-import asyncio
-from telethon import events
-from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.utils import admin_cmd
-
-
+from telethon.tl.types import ChannelParticipantsAdmins
 @borg.on(admin_cmd("warn1"))
 async def _(event):
     if event.fwd_from:
@@ -20,13 +16,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-""".admin Plugin for @UniBorg"""
-import asyncio
-from telethon import events
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import admin_cmd
-
-
+""".admin Plugin for @IndianBot"""
 @borg.on(admin_cmd("warn2"))
 async def _(event):
     if event.fwd_from:
@@ -43,13 +33,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-""".admin Plugin for @UniBorg"""
-import asyncio
-from telethon import events
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import admin_cmd
-
-
+""".admin Plugin for @IndianBot"""
 @borg.on(admin_cmd("warn3"))
 async def _(event):
     if event.fwd_from:
@@ -66,13 +50,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-""".admin Plugin for @UniBorg"""
-import asyncio
-from telethon import events
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import admin_cmd
-
-
+""".admin Plugin for @IndianBot"""
 @borg.on(admin_cmd("warn0"))
 async def _(event):
     if event.fwd_from:
@@ -89,14 +67,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-""".admin Plugin for @UniBorg"""
-import asyncio
-from telethon import events
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import admin_cmd
-
-
-
+""".admin Plugin for @IndianBot"""
 @borg.on(admin_cmd("ocb"))
 async def _(event):
     if event.fwd_from:
