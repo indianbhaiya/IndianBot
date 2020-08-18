@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/newlogo.png">
 
-# Will Re-Start Again In 1 Week!!
+# Will Re-Start Again In 1 Day!!
 
 Best User Bot To Manage Your Telegram Account 😉
 ## Most PowerFul And Better And Secure !
