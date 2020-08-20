@@ -74,7 +74,7 @@ Support Config.
 
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/lic.png">
-  
+
 ```Python3
 MIT License
 
