@@ -31,7 +31,7 @@ async def cmd_list(event):
                         force_document=True,
                         allow_cache=False,
                         caption="**COMMANDS**",
-                        reply_to=reply_to_id
+                        reply_to=reply_to_id,
                     )
                     await event.delete()
             else:
@@ -48,13 +48,10 @@ async def cmd_list(event):
         else:
             help_string = """Userbot Helper.. \nProvided by [IndianBot](https://t.me/IndianBot_Official)\n`Userbot Helper to reveal all the commands`"""
             results = await bot.inline_query(  # pylint:disable=E0602
-                tgbotusername,
-                help_string
+                tgbotusername, help_string
             )
             await results[0].click(
-                event.chat_id,
-                reply_to=event.reply_to_msg_id,
-                hide_via=True
+                event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
             await event.delete()
 
@@ -74,81 +71,96 @@ prefs = {"download.default_directory": "./"}
 
 
 def http_lago():
-    logo = (' ██          ███████████████ ████████████ ███████████\n'
-            ' ██          ██     ██            ██      ██       ██\n'
-            ' ██          ██     ██            ██      ██       ██\n'
-            ' ██████████████     ██            ██      ███████████\n'
-            ' ██          ██     ██            ██      ██\n'
-            ' ██          ██     ██            ██      ██\n'
-            ' ██          ██     ██            ██      ██\n'
-            '█████████████████████████████████████████████████████\n')
-    print(f'{logo}')
+    logo = (
+        " ██          ███████████████ ████████████ ███████████\n"
+        " ██          ██     ██            ██      ██       ██\n"
+        " ██          ██     ██            ██      ██       ██\n"
+        " ██████████████     ██            ██      ███████████\n"
+        " ██          ██     ██            ██      ██\n"
+        " ██          ██     ██            ██      ██\n"
+        " ██          ██     ██            ██      ██\n"
+        "█████████████████████████████████████████████████████\n"
+    )
+    print(f"{logo}")
 
 
 def socks4_lago():
-    logo = ('███████████ ████████████ ████████████ ██      ██ ███████████  ██\n'
-            '██          ██        ██ ██           ██    ██   ██           ██    ██\n'
-            '██          ██        ██ ██	       ██  ██	  ██           ██    ██\n'
-            '███████████ ██   ██   ██ ██ 	       ████       ███████████  █████████████\n'
-            '         ██ ██        ██ ██	       ██  ██              ██        ██\n'
-            '         ██ ██        ██ ██	       ██    ██            ██        ██\n'
-            '███████████ ████████████ ████████████ ██      ██ ███████████        ██\n'
-            '███████████████████████████████████████████████████████████████████████████\n')
-    print(f'{logo}')
+    logo = (
+        "███████████ ████████████ ████████████ ██      ██ ███████████  ██\n"
+        "██          ██        ██ ██           ██    ██   ██           ██    ██\n"
+        "██          ██        ██ ██	       ██  ██	  ██           ██    ██\n"
+        "███████████ ██   ██   ██ ██ 	       ████       ███████████  █████████████\n"
+        "         ██ ██        ██ ██	       ██  ██              ██        ██\n"
+        "         ██ ██        ██ ██	       ██    ██            ██        ██\n"
+        "███████████ ████████████ ████████████ ██      ██ ███████████        ██\n"
+        "███████████████████████████████████████████████████████████████████████████\n"
+    )
+    print(f"{logo}")
 
 
 def socks5_lago():
-    logo = ('███████████ ████████████ ████████████ ██      ██ ███████████    ███████████\n'
-            '██          ██        ██ ██           ██    ██   ██             ██\n'
-            '██          ██        ██ ██	       ██  ██	  ██             ██\n'
-            '███████████ ██   ██   ██ ██ 	       ████       ███████████    ███████████\n'
-            '         ██ ██        ██ ██	       ██  ██              ██               ██\n'
-            '         ██ ██        ██ ██	       ██    ██            ██               ██\n'
-            '███████████ ████████████ ████████████ ██      ██ ███████████    ███████████\n'
-            '██████████████████████████████████████████████████████████████████████████████\n')
-    print(f'{logo}')
+    logo = (
+        "███████████ ████████████ ████████████ ██      ██ ███████████    ███████████\n"
+        "██          ██        ██ ██           ██    ██   ██             ██\n"
+        "██          ██        ██ ██	       ██  ██	  ██             ██\n"
+        "███████████ ██   ██   ██ ██ 	       ████       ███████████    ███████████\n"
+        "         ██ ██        ██ ██	       ██  ██              ██               ██\n"
+        "         ██ ██        ██ ██	       ██    ██            ██               ██\n"
+        "███████████ ████████████ ████████████ ██      ██ ███████████    ███████████\n"
+        "██████████████████████████████████████████████████████████████████████████████\n"
+    )
+    print(f"{logo}")
 
 
 def success_lago():
-    logo = ('███████▒███ █▒       █ ███▒████ ████████ ████▒▒███ ██████████ ██████████\n'
-            '█▒          █▒       █ █        ▒        █         ▒▒         █▒\n'
-            '█▒          █▒       █ ▒        █        █         ██         ▒█\n'
-            '███████████ █▒       █ █        █        ███▒███   ███▒██████ ██████████\n'
-            '         ▒█ █▒       █ █        ▒        █                 ██         ▒█\n'
-            '         ▒█ █▒       █ ▒        █        █                 ██         █▒\n'
-            '████▒██████ ██████████ ████████ ████████ ▒████████ ██▒███████ ███▒███▒██\n'
-            '████████████████████████████████████████████████████████████████████████\n')
-    print(f'{logo}')
+    logo = (
+        "███████▒███ █▒       █ ███▒████ ████████ ████▒▒███ ██████████ ██████████\n"
+        "█▒          █▒       █ █        ▒        █         ▒▒         █▒\n"
+        "█▒          █▒       █ ▒        █        █         ██         ▒█\n"
+        "███████████ █▒       █ █        █        ███▒███   ███▒██████ ██████████\n"
+        "         ▒█ █▒       █ █        ▒        █                 ██         ▒█\n"
+        "         ▒█ █▒       █ ▒        █        █                 ██         █▒\n"
+        "████▒██████ ██████████ ████████ ████████ ▒████████ ██▒███████ ███▒███▒██\n"
+        "████████████████████████████████████████████████████████████████████████\n"
+    )
+    print(f"{logo}")
 
 
 def done_lago():
-    logo = ('█████████    █████████ ██      █ █▒███████'
-            '█        █   █       █ ▒ █     ▒ █'
-            '█         █  █       █ █  ▒    █ █'
-            '█   ▒▒     █ █  ▒▒▒  █ █   █   █ ███▒▒██'
-            '█         █  █       █ █    ▒  █ █'
-            '█        █   █       █ ▒     █ █ █'
-            '█████████    █████████ █      ▒▒ ███▒████▒'
-            '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒')
-    print(f'{logo}')
+    logo = (
+        "█████████    █████████ ██      █ █▒███████"
+        "█        █   █       █ ▒ █     ▒ █"
+        "█         █  █       █ █  ▒    █ █"
+        "█   ▒▒     █ █  ▒▒▒  █ █   █   █ ███▒▒██"
+        "█         █  █       █ █    ▒  █ █"
+        "█        █   █       █ ▒     █ █ █"
+        "█████████    █████████ █      ▒▒ ███▒████▒"
+        "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"
+    )
+    print(f"{logo}")
+
+
 # Now This Is The Main Part
 @borg.on(admin_cmd("http"))
 async def HTTP_wale_proxy(http_credit_akash):
     http_lago()
-    await http_credit_akash.edit('**One Minito**')
-    driver = webdriver.Chrome(
-        executable_path=CHROME_DRIVER, options=chrome_options)
-    await http_credit_akash.edit('**Patient Boi\nI am Downloading**')
-    driver.get('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all')
+    await http_credit_akash.edit("**One Minito**")
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    await http_credit_akash.edit("**Patient Boi\nI am Downloading**")
+    driver.get(
+        "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all"
+    )
     file = "./http_proxies.txt"
     s(3)
     driver.quit()
-    await http_credit_akash.edit('**Rukh Na Gandu\nApun Upload Kar Raha He**')
-    await http_credit_akash.client.send_file(http_credit_akash.chat_id, file, force_document=True)
+    await http_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**")
+    await http_credit_akash.client.send_file(
+        http_credit_akash.chat_id, file, force_document=True
+    )
     done_lago()
     s(1)
-    await http_credit_akash.edit('**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**')
-    cmd('rm ./http_proxies.txt')
+    await http_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**")
+    cmd("rm ./http_proxies.txt")
     s(1)
     await http_credit_akash.delete()
     success_lago()
@@ -157,21 +169,23 @@ async def HTTP_wale_proxy(http_credit_akash):
 @borg.on(admin_cmd("Socks4"))
 async def Socks4_wale_proxy(socks4_credit_akash):
     socks4_lago()
-    await socks4_credit_akash.edit('**One Minito**')
-    driver = webdriver.Chrome(
-        executable_path=CHROME_DRIVER, options=chrome_options)
-    await socks4_credit_akash.edit('**Patient Boi\nI am Downloading**')
+    await socks4_credit_akash.edit("**One Minito**")
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    await socks4_credit_akash.edit("**Patient Boi\nI am Downloading**")
     driver.get(
-        'https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all')
+        "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all"
+    )
     file = "./socks4_proxies.txt"
     s(3)
     driver.quit()
-    await socks4_credit_akash.edit('**Rukh Na Gandu\nApun Upload Kar Raha He**')
-    await socks4_credit_akash.client.send_file(socks4_credit_akash.chat_id, file, force_document=True)
+    await socks4_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**")
+    await socks4_credit_akash.client.send_file(
+        socks4_credit_akash.chat_id, file, force_document=True
+    )
     done_lago()
     s(1)
-    await socks4_credit_akash.edit('**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**')
-    cmd('rm ./socks4_proxies.txt')
+    await socks4_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**")
+    cmd("rm ./socks4_proxies.txt")
     s(1)
     await socks4_credit_akash.delete()
     success_lago()
@@ -180,21 +194,23 @@ async def Socks4_wale_proxy(socks4_credit_akash):
 @borg.on(admin_cmd("Socks5"))
 async def Socks5_wale_proxy(socks5_credit_akash):
     socks5_lago()
-    await socks5_credit_akash.edit('**One Minito**')
-    driver = webdriver.Chrome(
-        executable_path=CHROME_DRIVER, options=chrome_options)
-    await socks5_credit_akash.edit('**Patient Boi\nI am Downloading**')
+    await socks5_credit_akash.edit("**One Minito**")
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    await socks5_credit_akash.edit("**Patient Boi\nI am Downloading**")
     driver.get(
-        'https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all')
+        "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all"
+    )
     file = "./socks5_proxies.txt"
     s(3)
     driver.quit()
-    await socks5_credit_akash.edit('**Rukh Na Gandu\nApun Upload Kar Raha He**')
-    await socks5_credit_akash.client.send_file(socks5_credit_akash.chat_id, file, force_document=True)
+    await socks5_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**")
+    await socks5_credit_akash.client.send_file(
+        socks5_credit_akash.chat_id, file, force_document=True
+    )
     done_lago()
     s(1)
-    await socks5_credit_akash.edit('**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**')
-    cmd('rm ./socks5_proxies.txt')
+    await socks5_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**")
+    cmd("rm ./socks5_proxies.txt")
     s(1)
     await socks5_credit_akash.delete()
     success_lago()

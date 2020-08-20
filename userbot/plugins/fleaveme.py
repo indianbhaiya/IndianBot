@@ -3,6 +3,8 @@ Available Commands:
 .fleave"""
 import asyncio
 from uniborg.util import admin_cmd
+
+
 @borg.on(admin_cmd(pattern=r"fleave"))
 async def _(event):
     if event.fwd_from:
@@ -25,7 +27,8 @@ async def _(event):
         "**Chat Message Exported To** `./Inpu/homework/`",
         "**Chat Message Exported To** `./Inpu/homework/groupchat.txt`",
         "__Legend is leaving this chat.....! ",
-        "__Legend is leaving this chat.....!"]
+        "__Legend is leaving this chat.....!",
+    ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i])

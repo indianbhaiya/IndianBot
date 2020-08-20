@@ -1,10 +1,14 @@
 from userbot.utils import admin_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
+
+
 @borg.on(admin_cmd("warn1"))
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "`You Have  1/3  warnings...\nWatch out!....\nReason for warn: Not given`"
+    mentions = (
+        "`You Have  1/3  warnings...\nWatch out!....\nReason for warn: Not given`"
+    )
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -16,12 +20,17 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
+
 """.admin Plugin for @IndianBot"""
+
+
 @borg.on(admin_cmd("warn2"))
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "`You Have  2/3  warnings...\nWatch out!....\nReason for last warn: Not given`"
+    mentions = (
+        "`You Have  2/3  warnings...\nWatch out!....\nReason for last warn: Not given`"
+    )
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -33,7 +42,10 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
+
 """.admin Plugin for @IndianBot"""
+
+
 @borg.on(admin_cmd("warn3"))
 async def _(event):
     if event.fwd_from:
@@ -50,7 +62,10 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
+
 """.admin Plugin for @IndianBot"""
+
+
 @borg.on(admin_cmd("warn0"))
 async def _(event):
     if event.fwd_from:
@@ -67,7 +82,10 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
+
 """.admin Plugin for @IndianBot"""
+
+
 @borg.on(admin_cmd("ocb"))
 async def _(event):
     if event.fwd_from:

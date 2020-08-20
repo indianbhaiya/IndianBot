@@ -3,6 +3,8 @@ Available Commands:
 .hypno"""
 import asyncio
 from uniborg.util import admin_cmd
+
+
 @borg.on(admin_cmd(pattern=r"hypno"))
 async def _(event):
     if event.fwd_from:
@@ -25,7 +27,7 @@ async def _(event):
         "⬜⬜⬜⬜⬜⬜⬜\n⬜⬛⬛⬛⬛⬛⬜\n⬜⬛⬜⬜⬜⬛⬜\n⬜⬛⬜⬛⬜⬛⬜\n⬜⬛⬜⬜⬜⬛⬜\n⬜⬛⬛⬛⬛⬛⬜\n⬜⬜⬜⬜⬜⬜⬜",
         "⬛⬛⬛⬛⬛\n⬛⬜⬜⬜⬛\n⬛⬜⬛⬜⬛\n⬛⬜⬜⬜⬛\n⬛⬛⬛⬛⬛",
         "⬜⬜⬜\n⬜⬛⬜\n⬜⬜⬜",
-        "[👉🔴👈](https://t.me/IndianArMyGiveaway)"
+        "[👉🔴👈](https://t.me/IndianArMyGiveaway)",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)

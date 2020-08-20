@@ -3,6 +3,8 @@ Available Commands:
 .wtf"""
 import asyncio
 from userbot.utils import admin_cmd
+
+
 @borg.on(admin_cmd("wtf"))
 async def _(event):
     if event.fwd_from:
@@ -14,7 +16,7 @@ async def _(event):
         "What The",
         "What The F",
         "What The F Brah",
-        "[What The F Brah](https://telegra.ph//file/f3b760e4a99340d331f9b.jpg)"
+        "[What The F Brah](https://telegra.ph//file/f3b760e4a99340d331f9b.jpg)",
     ]
     for i in animation_ttl:
         await asyncio.sleep(0.3)

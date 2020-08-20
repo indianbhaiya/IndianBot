@@ -11,10 +11,10 @@ async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`I iz Leaving dis Kensur Group kek!`")
         time.sleep(3)
-        if '-' in str(e.chat_id):
+        if "-" in str(e.chat_id):
             await bot(LeaveChannelRequest(e.chat_id))
         else:
-            await e.edit('`Sar This is Not A Chat`')
+            await e.edit("`Sar This is Not A Chat`")
 
 
 @borg.on(admin_cmd(";__;$"))
@@ -98,42 +98,16 @@ async def _(event):
         deq.rotate(1)
 
 
-CMD_HELP.update({
-    "leave": "Leave a Chat"
-})
-CMD_HELP.update({
-    ";__;": "You try it!"
-})
-CMD_HELP.update({
-    "cry": "Cry"
-})
-CMD_HELP.update({
-    "fp": "Send face palm emoji."
-})
-CMD_HELP.update({
-    "moon": "Bot will send a cool moon animation."
-})
-CMD_HELP.update({
-    "clock": "Bot will send a cool clock animation."
-})
-CMD_HELP.update({
-    "readme": "Reedme."
-})
-CMD_HELP.update({
-    "source": "Gives the source of your userbot"
-})
-CMD_HELP.update({
-    "myusernames": "List of Usernames owned by you."
-})
-CMD_HELP.update({
-    "oof": "Same as ;__; but ooof"
-})
-CMD_HELP.update({
-    "earth": "Sends Kensar Earth animation"
-})
-CMD_HELP.update({
-    "heart": "Try and you'll get your emotions back"
-})
-CMD_HELP.update({
-    "fap": "Faking orgasm"
-})
+CMD_HELP.update({"leave": "Leave a Chat"})
+CMD_HELP.update({";__;": "You try it!"})
+CMD_HELP.update({"cry": "Cry"})
+CMD_HELP.update({"fp": "Send face palm emoji."})
+CMD_HELP.update({"moon": "Bot will send a cool moon animation."})
+CMD_HELP.update({"clock": "Bot will send a cool clock animation."})
+CMD_HELP.update({"readme": "Reedme."})
+CMD_HELP.update({"source": "Gives the source of your userbot"})
+CMD_HELP.update({"myusernames": "List of Usernames owned by you."})
+CMD_HELP.update({"oof": "Same as ;__; but ooof"})
+CMD_HELP.update({"earth": "Sends Kensar Earth animation"})
+CMD_HELP.update({"heart": "Try and you'll get your emotions back"})
+CMD_HELP.update({"fap": "Faking orgasm"})

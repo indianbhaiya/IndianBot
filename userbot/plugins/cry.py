@@ -16,7 +16,6 @@ async def _(event):
     await event.edit("crying")
 
     animation_chars = [
-
         ";__",
         ";___",
         ";____",
@@ -52,7 +51,7 @@ async def _(event):
         ";____",
         ";___",
         ";__",
-        ";You made me `CRY`"
+        ";You made me `CRY`",
     ]
 
     for i in animation_ttl:

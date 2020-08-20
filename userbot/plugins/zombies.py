@@ -6,7 +6,7 @@
 from telethon import events
 from userbot.utils import admin_cmd
 from asyncio import sleep
-from telethon.errors import (ChatAdminRequiredError, UserAdminInvalidError)
+from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
@@ -73,15 +73,15 @@ async def rm_deletedacc(show):
         if user.deleted:
             try:
                 await show.client(
-                    EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS))
+                    EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
+                )
             except ChatAdminRequiredError:
                 await show.edit("`I don't have ban rights in this group`")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
-            await show.client(
-                EditBannedRequest(show.chat_id, user.id, UNBAN_RIGHTS))
+            await show.client(EditBannedRequest(show.chat_id, user.id, UNBAN_RIGHTS))
             del_u += 1
     if del_u > 0:
         del_status = f"Cleaned **{del_u}** deleted account(s)"
@@ -93,6 +93,8 @@ async def rm_deletedacc(show):
     await show.delete()
     if Config.G_BAN_LOGGER_GROUP is not None:
         await show.client.send_message(
-            Config.G_BAN_LOGGER_GROUP, "#CLEANUP\n"
+            Config.G_BAN_LOGGER_GROUP,
+            "#CLEANUP\n"
             f"Cleaned **{del_u}** deleted account(s) !!\
-            \nCHAT: {show.chat.title}(`{show.chat_id}`)")
+            \nCHAT: {show.chat.title}(`{show.chat_id}`)",
+        )

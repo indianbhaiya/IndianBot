@@ -4,6 +4,8 @@ import traceback
 import sys
 import io
 from uniborg.util import admin_cmd
+
+
 @borg.on(admin_cmd("eval"))
 async def _(event):
     if event.fwd_from:
@@ -35,8 +37,7 @@ async def _(event):
         evaluation = stdout
     else:
         evaluation = "Success"
-    final_output = "**EVAL**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(
-        cmd, evaluation)
+    final_output = "**EVAL**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(cmd, evaluation)
     if len(final_output) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(final_output)) as out_file:
             out_file.name = "eval.text"
@@ -46,7 +47,7 @@ async def _(event):
                 force_document=True,
                 allow_cache=False,
                 caption=cmd,
-                reply_to=reply_to_id
+                reply_to=reply_to_id,
             )
             await event.delete()
     else:
@@ -54,8 +55,5 @@ async def _(event):
 
 
 async def aexec(code, event):
-    exec(
-        f'async def __aexec(event): ' +
-        ''.join(f'\n {l}' for l in code.split('\n'))
-    )
-    return await locals()['__aexec'](event)
+    exec(f"async def __aexec(event): " + "".join(f"\n {l}" for l in code.split("\n")))
+    return await locals()["__aexec"](event)
