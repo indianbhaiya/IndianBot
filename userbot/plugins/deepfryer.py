@@ -1,8 +1,11 @@
 """ Userbot module for frying stuff. ported by @IndianBot """
 import io
-from random import randint, uniform
+from random import randint
+from random import uniform
 
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image
+from PIL import ImageEnhance
+from PIL import ImageOps
 from telethon.tl.types import DocumentAttributeFilename
 from uniborg.util import admin_cmd
 

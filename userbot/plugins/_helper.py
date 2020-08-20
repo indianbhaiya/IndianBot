@@ -4,7 +4,9 @@ from time import sleep as s
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from userbot import CHROME_DRIVER, CMD_LIST, GOOGLE_CHROME_BIN
+from userbot import CHROME_DRIVER
+from userbot import CMD_LIST
+from userbot import GOOGLE_CHROME_BIN
 from userbot.utils import admin_cmd
 
 
