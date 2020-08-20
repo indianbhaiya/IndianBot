@@ -32,7 +32,7 @@ async def _(event):
         last_name = html.escape(last_name)
         last_name = last_name.replace("\u2060", "")
     if last_name is None:
-      last_name = "⁪⁬⁮⁮⁮⁮ ‌‌‌‌"
+        last_name = "⁪⁬⁮⁮⁮⁮ ‌‌‌‌"
     # giving myself credits cause y not
     user_bio = replied_user.about
     if user_id == 953414679:
@@ -51,7 +51,7 @@ async def _(event):
         about=user_bio
     ))
     n = 1
-    pfile = await borg.upload_file(profile_pic)  # pylint:disable=E060      
+    pfile = await borg.upload_file(profile_pic)  # pylint:disable=E060
     await borg(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
         pfile
     ))
@@ -65,10 +65,12 @@ async def _(event):
     #  )
     await event.delete()
     await borg.send_message(
-      event.chat_id,
-      "**LET US BE AS ONE**",
-      reply_to=reply_message
-      )
+        event.chat_id,
+        "**LET US BE AS ONE**",
+        reply_to=reply_message
+    )
+
+
 async def get_full_user(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()

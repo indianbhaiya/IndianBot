@@ -1,8 +1,15 @@
+from userbot import CHROME_DRIVER
+from selenium.webdriver.chrome.options import Options
+from userbot import GOOGLE_CHROME_BIN
+from time import sleep as s
+from selenium import webdriver
+from os import system as cmd
 from userbot import CMD_LIST
 from userbot.utils import admin_cmd
 
+
 @command(pattern="^.help ?(.*)")
-#@borg.on(admin_cmd(pattern=r"help ?(.*)"))
+# @borg.on(admin_cmd(pattern=r"help ?(.*)"))
 async def cmd_list(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
@@ -51,16 +58,9 @@ async def cmd_list(event):
             )
             await event.delete()
 
-            
+
 # I Will Realy Call Cops If You Steal This Plugin!
 # Imports
-from os import system as cmd
-from selenium import webdriver
-from time import sleep as s
-from userbot import GOOGLE_CHROME_BIN
-from userbot.utils import admin_cmd
-from selenium.webdriver.chrome.options import Options
-from userbot import CHROME_DRIVER
 # Important-vars
 download_path = "./"
 chrome_options = Options()
@@ -71,6 +71,8 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-gpu")
 prefs = {"download.default_directory": "./"}
+
+
 def http_lago():
     logo = (' ██          ███████████████ ████████████ ███████████\n'
             ' ██          ██     ██            ██      ██       ██\n'
@@ -81,6 +83,8 @@ def http_lago():
             ' ██          ██     ██            ██      ██\n'
             '█████████████████████████████████████████████████████\n')
     print(f'{logo}')
+
+
 def socks4_lago():
     logo = ('███████████ ████████████ ████████████ ██      ██ ███████████  ██\n'
             '██          ██        ██ ██           ██    ██   ██           ██    ██\n'
@@ -91,6 +95,8 @@ def socks4_lago():
             '███████████ ████████████ ████████████ ██      ██ ███████████        ██\n'
             '███████████████████████████████████████████████████████████████████████████\n')
     print(f'{logo}')
+
+
 def socks5_lago():
     logo = ('███████████ ████████████ ████████████ ██      ██ ███████████    ███████████\n'
             '██          ██        ██ ██           ██    ██   ██             ██\n'
@@ -101,6 +107,8 @@ def socks5_lago():
             '███████████ ████████████ ████████████ ██      ██ ███████████    ███████████\n'
             '██████████████████████████████████████████████████████████████████████████████\n')
     print(f'{logo}')
+
+
 def success_lago():
     logo = ('███████▒███ █▒       █ ███▒████ ████████ ████▒▒███ ██████████ ██████████\n'
             '█▒          █▒       █ █        ▒        █         ▒▒         █▒\n'
@@ -111,6 +119,8 @@ def success_lago():
             '████▒██████ ██████████ ████████ ████████ ▒████████ ██▒███████ ███▒███▒██\n'
             '████████████████████████████████████████████████████████████████████████\n')
     print(f'{logo}')
+
+
 def done_lago():
     logo = ('█████████    █████████ ██      █ █▒███████'
             '█        █   █       █ ▒ █     ▒ █'
@@ -126,7 +136,8 @@ def done_lago():
 async def HTTP_wale_proxy(http_credit_akash):
     http_lago()
     await http_credit_akash.edit('**One Minito**')
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER, options=chrome_options)
     await http_credit_akash.edit('**Patient Boi\nI am Downloading**')
     driver.get('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all')
     file = "./http_proxies.txt"
@@ -141,13 +152,17 @@ async def HTTP_wale_proxy(http_credit_akash):
     s(1)
     await http_credit_akash.delete()
     success_lago()
+
+
 @borg.on(admin_cmd("Socks4"))
 async def Socks4_wale_proxy(socks4_credit_akash):
     socks4_lago()
     await socks4_credit_akash.edit('**One Minito**')
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER, options=chrome_options)
     await socks4_credit_akash.edit('**Patient Boi\nI am Downloading**')
-    driver.get('https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all')
+    driver.get(
+        'https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all')
     file = "./socks4_proxies.txt"
     s(3)
     driver.quit()
@@ -160,13 +175,17 @@ async def Socks4_wale_proxy(socks4_credit_akash):
     s(1)
     await socks4_credit_akash.delete()
     success_lago()
+
+
 @borg.on(admin_cmd("Socks5"))
 async def Socks5_wale_proxy(socks5_credit_akash):
     socks5_lago()
     await socks5_credit_akash.edit('**One Minito**')
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(
+        executable_path=CHROME_DRIVER, options=chrome_options)
     await socks5_credit_akash.edit('**Patient Boi\nI am Downloading**')
-    driver.get('https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all')
+    driver.get(
+        'https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all')
     file = "./socks5_proxies.txt"
     s(3)
     driver.quit()

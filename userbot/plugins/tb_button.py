@@ -3,7 +3,10 @@
 import re
 from telethon import custom
 from uniborg.util import admin_cmd
-BTN_URL_REGEX = re.compile(r"(\{([^\[]+?)\}\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
+BTN_URL_REGEX = re.compile(
+    r"(\{([^\[]+?)\}\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
+
+
 @borg.on(admin_cmd(pattern="cbutton"))  # pylint:disable=E0602
 async def _(event):
     if Config.TG_BOT_USER_NAME_BF_HER is None or tgbot is None:
@@ -27,7 +30,8 @@ async def _(event):
             n_escapes += 1
             to_check -= 1
         if n_escapes % 2 == 0:
-            buttons.append((match.group(2), match.group(3), bool(match.group(4))))
+            buttons.append(
+                (match.group(2), match.group(3), bool(match.group(4))))
             note_data += markdown_note[prev:match.start(1)]
             prev = match.end(1)
         else:
@@ -54,6 +58,8 @@ async def _(event):
         link_preview=False,
         buttons=tl_ib_buttons
     )
+
+
 def build_keyboard(buttons):
     keyb = []
     for btn in buttons:

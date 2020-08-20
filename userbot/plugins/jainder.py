@@ -71,7 +71,7 @@ async def _(event):
         emoticons = [
             "-ᄒᴥᄒ-",
             "◖⚆ᴥ⚆◗"]
-    else:    
+    else:
         emoticons = [
             "( ͡° ͜ʖ ͡°)",
             "¯\_(ツ)_/¯",

@@ -4,17 +4,19 @@
 # Usage .gamerdp  Im Not Responsible For Any Ban caused By This
 import requests
 import re
-import random 
+import random
 import urllib
-import os 
+import os
 from telethon.tl import functions
 from uniborg.util import admin_cmd
 COLLECTION_STRING = [
-  "star-wars-wallpaper-1080p",
-  "4k-sci-fi-wallpaper",
-  "star-wars-iphone-6-wallpaper",
-  "kylo-ren-wallpaper",
-  "darth-vader-wallpaper"]
+    "star-wars-wallpaper-1080p",
+    "4k-sci-fi-wallpaper",
+    "star-wars-iphone-6-wallpaper",
+    "kylo-ren-wallpaper",
+    "darth-vader-wallpaper"]
+
+
 async def animepp():
     os.system("rm -rf donot.jpg")
     rnd = random.randint(0, len(COLLECTION_STRING) - 1)
@@ -25,13 +27,16 @@ async def animepp():
     fy = "http://getwallpapers.com"+random.choice(f)
     print(fy)
     if not os.path.exists("f.ttf"):
-        urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
-    urllib.request.urlretrieve(fy,"donottouch.jpg")
+        urllib.request.urlretrieve(
+            "https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf", "f.ttf")
+    urllib.request.urlretrieve(fy, "donottouch.jpg")
+
+
 @borg.on(admin_cmd(pattern="gamerdp ?(.*)"))
 async def main(event):
     await event.edit("**Starting Gamer Profile Pic.......\n\nModded by @Mariodevs ! Check Your Dp After 20 Seconds")
     while True:
         await animepp()
-        file = await event.client.upload_file("donottouch.jpg")  
+        file = await event.client.upload_file("donottouch.jpg")
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")

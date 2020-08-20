@@ -21,7 +21,8 @@ async def _(event):
             )
             directory_name = downloaded_file_name
             await event.edit("Finish downloading to my local")
-            zipfile.ZipFile(directory_name + '.zip', 'w', zipfile.ZIP_DEFLATED).write(directory_name)
+            zipfile.ZipFile(directory_name + '.zip', 'w',
+                            zipfile.ZIP_DEFLATED).write(directory_name)
             await borg.send_file(
                 event.chat_id,
                 directory_name + ".zip",
@@ -42,5 +43,6 @@ async def _(event):
             await mone.edit(str(e))
     elif input_str:
         directory_name = input_str
-        zipfile.ZipFile(directory_name + '.zip', 'w', zipfile.ZIP_DEFLATED).write(directory_name)
+        zipfile.ZipFile(directory_name + '.zip', 'w',
+                        zipfile.ZIP_DEFLATED).write(directory_name)
         await event.edit("Local file compressed to `{}`".format(directory_name + ".zip"))

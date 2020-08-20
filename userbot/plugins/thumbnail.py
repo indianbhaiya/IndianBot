@@ -11,12 +11,15 @@ from hachoir.parser import createParser
 from PIL import Image
 from uniborg.util import admin_cmd
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
+
+
 def get_video_thumb(file, output=None, width=320):
     output = file + ".jpg"
     metadata = extractMetadata(createParser(file))
     p = subprocess.Popen([
         'ffmpeg', '-i', file,
-        '-ss', str(int((0, metadata.get('duration').seconds)[metadata.has('duration')] / 2)),
+        '-ss', str(int((0, metadata.get('duration').seconds)
+                       [metadata.has('duration')] / 2)),
         '-vframes', '1',
         output,
     ], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
@@ -24,6 +27,8 @@ def get_video_thumb(file, output=None, width=320):
     if not p.returncode and os.path.lexists(file):
         os.remove(file)
         return output
+
+
 @borg.on(admin_cmd(pattern="savethumbnail"))
 async def _(event):
     if event.fwd_from:
@@ -44,17 +49,20 @@ async def _(event):
         height = 0
         if metadata.has("height"):
             height = metadata.get("height")
-        Image.open(downloaded_file_name).convert("RGB").save(downloaded_file_name)
+        Image.open(downloaded_file_name).convert(
+            "RGB").save(downloaded_file_name)
         img = Image.open(downloaded_file_name)
         img.resize((320, height))
         img.save(thumb_image_path, "JPEG")
         os.remove(downloaded_file_name)
         await event.edit(
-            "Custom video / file thumbnail saved. " + \
+            "Custom video / file thumbnail saved. " +
             "This image will be used in the upload, till `.clearthumbnail`."
         )
     else:
         await event.edit("Reply to a photo to save custom thumbnail")
+
+
 @borg.on(admin_cmd(pattern="clearthumbnail"))
 async def _(event):
     if event.fwd_from:
@@ -62,6 +70,8 @@ async def _(event):
     if os.path.exists(thumb_image_path):
         os.remove(thumb_image_path)
     await event.edit("✅ Custom thumbnail cleared succesfully.")
+
+
 @borg.on(admin_cmd(pattern="getthumbnail"))
 async def _(event):
     if event.fwd_from:

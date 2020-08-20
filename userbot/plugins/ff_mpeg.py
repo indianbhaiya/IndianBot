@@ -34,6 +34,8 @@ async def ff_mpeg_trim_cmd(event):
     else:
         await event.edit(
             f"a media file already exists in path. Please remove the media and try again!\n`.exec rm {FF_MPEG_DOWN_LOAD_MEDIA_PATH}`")
+
+
 @borg.on(admin_cmd("ffmpegtrim"))
 async def ff_mpeg_trim_cmd(event):
     if event.fwd_from:
@@ -99,9 +101,11 @@ async def ff_mpeg_trim_cmd(event):
     end = datetime.now()
     ms = (end - start).seconds
     await event.edit(f"Completed Process in {ms} seconds")
+
+
 async def take_screen_shot(video_file, output_directory, ttl):
     out_put_file_name = output_directory + \
-                        "/" + str(time.time()) + ".jpg"
+        "/" + str(time.time()) + ".jpg"
     file_genertor_command = [
         "ffmpeg",
         "-ss",
@@ -127,9 +131,11 @@ async def take_screen_shot(video_file, output_directory, ttl):
         logger.info(e_response)
         logger.info(t_response)
         return None
+
+
 async def cult_small_video(video_file, output_directory, start_time, end_time):
     out_put_file_name = output_directory + \
-                        "/" + str(round(time.time())) + ".mp4"
+        "/" + str(round(time.time())) + ".mp4"
     file_genertor_command = [
         "ffmpeg",
         "-i",

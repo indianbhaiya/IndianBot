@@ -31,6 +31,8 @@ async def _(event):
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 10])
+
+
 @borg.on(admin_cmd(pattern=r"(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -56,6 +58,8 @@ async def _(event):
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 10])
+
+
 @borg.on(admin_cmd(pattern=r"(.*)"))
 async def _(event):
     if event.fwd_from:
