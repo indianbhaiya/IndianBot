@@ -2,11 +2,12 @@
 # Made By mariodevs Keep Credits If You Are Goanna Kang This Lol
 # And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 # Usage .gamerdp  Im Not Responsible For Any Ban caused By This
-import requests
-import re
-import random
-import urllib
 import os
+import random
+import re
+import urllib
+
+import requests
 from telethon.tl import functions
 from uniborg.util import admin_cmd
 

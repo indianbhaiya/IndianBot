@@ -2,12 +2,14 @@
 and set as own profile.
 Syntax: .clone @username"""
 
-import html
 import asyncio
+import html
+
+from telethon.tl import functions
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
+
 from userbot.utils import admin_cmd
-from telethon.tl import functions
 
 
 @borg.on(admin_cmd(pattern="clone ?(.*)"))

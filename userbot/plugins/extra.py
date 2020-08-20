@@ -1,8 +1,10 @@
 import asyncio
 import time
-from userbot import bot, BOTLOG, BOTLOG_CHATID, CMD_HELP
-from telethon.tl.functions.channels import LeaveChannelRequest
 from collections import deque
+
+from telethon.tl.functions.channels import LeaveChannelRequest
+
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from userbot.utils import admin_cmd
 
 

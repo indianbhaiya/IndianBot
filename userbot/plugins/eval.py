@@ -1,8 +1,9 @@
 """Evaluate Python Code inside Telegram
 Syntax: .eval PythonCode"""
-import traceback
-import sys
 import io
+import sys
+import traceback
+
 from uniborg.util import admin_cmd
 
 

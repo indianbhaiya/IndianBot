@@ -3,12 +3,14 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 """  Cmd = .zombie  """
-from telethon import events
-from userbot.utils import admin_cmd
 from asyncio import sleep
+
+from telethon import events
 from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
+
+from userbot.utils import admin_cmd
 
 # =================== CONSTANT ===================
 

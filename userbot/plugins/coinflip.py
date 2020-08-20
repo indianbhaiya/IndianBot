@@ -1,6 +1,7 @@
 """CoinFlip for @IndianBot
 Syntax: .coinflip [optional_choice]"""
 import random
+
 from uniborg.util import admin_cmd
 
 
