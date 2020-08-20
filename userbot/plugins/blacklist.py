@@ -23,7 +23,8 @@ async def on_new_message(event):
                 await event.delete()
             except Exception as e:
                 print(e)
-                await event.reply("I do not have DELETE permission in this chat")
+                await event.reply(
+                    "I do not have DELETE permission in this chat")
                 sql.rm_from_blacklist(event.chat_id, snip.lower())
             break
 
@@ -32,15 +33,13 @@ async def on_new_message(event):
 async def on_add_black_list(event):
     text = event.pattern_match.group(1)
     to_blacklist = list(
-        set(trigger.strip() for trigger in text.split("\n") if trigger.strip())
-    )
+        set(trigger.strip() for trigger in text.split("\n")
+            if trigger.strip()))
     for trigger in to_blacklist:
         sql.add_to_blacklist(event.chat_id, trigger.lower())
     await event.edit(
         "Added {} triggers to the blacklist in the current chat".format(
-            len(to_blacklist)
-        )
-    )
+            len(to_blacklist)))
 
 
 @borg.on(admin_cmd("listblacklist"))
@@ -72,10 +71,11 @@ async def on_view_blacklist(event):
 async def on_delete_blacklist(event):
     text = event.pattern_match.group(1)
     to_unblacklist = list(
-        set(trigger.strip() for trigger in text.split("\n") if trigger.strip())
-    )
+        set(trigger.strip() for trigger in text.split("\n")
+            if trigger.strip()))
     successful = 0
     for trigger in to_unblacklist:
         if sql.rm_from_blacklist(event.chat_id, trigger.lower()):
             successful += 1
-    await event.edit(f"Removed {successful} / {len(to_unblacklist)} from the blacklist")
+    await event.edit(
+        f"Removed {successful} / {len(to_unblacklist)} from the blacklist")

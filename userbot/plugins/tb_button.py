@@ -5,20 +5,24 @@ import re
 from telethon import custom
 from uniborg.util import admin_cmd
 
-BTN_URL_REGEX = re.compile(r"(\{([^\[]+?)\}\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
+BTN_URL_REGEX = re.compile(
+    r"(\{([^\[]+?)\}\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 
 
 @borg.on(admin_cmd(pattern="cbutton"))  # pylint:disable=E0602
 async def _(event):
     if Config.TG_BOT_USER_NAME_BF_HER is None or tgbot is None:
-        await event.edit("need to set up a @BotFather bot for this module to work")
+        await event.edit(
+            "need to set up a @BotFather bot for this module to work")
         return
     if Config.PLUGIN_CHANNEL is None:
-        await event.edit("need to have a `PLUGIN_CHANNEL` for this module to work")
+        await event.edit(
+            "need to have a `PLUGIN_CHANNEL` for this module to work")
         return
     reply_message = await event.get_reply_message()
     if reply_message is None:
-        await event.edit("reply to a message that I need to parse the magic on")
+        await event.edit("reply to a message that I need to parse the magic on"
+                         )
         return
     markdown_note = reply_message.text
     prev = 0
@@ -31,8 +35,9 @@ async def _(event):
             n_escapes += 1
             to_check -= 1
         if n_escapes % 2 == 0:
-            buttons.append((match.group(2), match.group(3), bool(match.group(4))))
-            note_data += markdown_note[prev : match.start(1)]
+            buttons.append(
+                (match.group(2), match.group(3), bool(match.group(4))))
+            note_data += markdown_note[prev:match.start(1)]
             prev = match.end(1)
         else:
             note_data += markdown_note[prev:to_check]
@@ -46,8 +51,7 @@ async def _(event):
     if reply_message.media is not None:
         message_id_in_channel = reply_message.id
         tgbot_reply_message = await tgbot.get_messages(
-            entity=Config.PLUGIN_CHANNEL, ids=message_id_in_channel
-        )
+            entity=Config.PLUGIN_CHANNEL, ids=message_id_in_channel)
         tgbot_reply_message = tgbot_reply_message.media
     await tgbot.send_message(
         entity=Config.PLUGIN_CHANNEL,

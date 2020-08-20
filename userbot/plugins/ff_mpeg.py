@@ -24,16 +24,16 @@ async def ff_mpeg_trim_cmd(event):
             try:
                 c_time = time.time()
                 downloaded_file_name = await borg.download_media(
-                    reply_message, FF_MPEG_DOWN_LOAD_MEDIA_PATH,
+                    reply_message,
+                    FF_MPEG_DOWN_LOAD_MEDIA_PATH,
                 )
             except Exception as e:  # pylint:disable=C0103,W0703
                 await event.edit(str(e))
             else:
                 end = datetime.now()
                 ms = (end - start).seconds
-                await event.edit(
-                    "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
-                )
+                await event.edit("Downloaded to `{}` in {} seconds.".format(
+                    downloaded_file_name, ms))
         else:
             await event.edit("Reply to a Telegram media file")
     else:
@@ -80,9 +80,8 @@ async def ff_mpeg_trim_cmd(event):
             logger.info(str(e))
     elif len(cmt) == 2:
         cmd, start_time = cmt
-        o = await take_screen_shot(
-            FF_MPEG_DOWN_LOAD_MEDIA_PATH, Config.TMP_DOWNLOAD_DIRECTORY, start_time
-        )
+        o = await take_screen_shot(FF_MPEG_DOWN_LOAD_MEDIA_PATH,
+                                   Config.TMP_DOWNLOAD_DIRECTORY, start_time)
         logger.info(o)
         try:
             c_time = time.time()
@@ -94,9 +93,8 @@ async def ff_mpeg_trim_cmd(event):
                 # supports_streaming=True,
                 allow_cache=False,
                 # reply_to=event.message.id,
-                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, event, c_time, "trying to upload")
-                ),
+                progress_callback=lambda d, t: asyncio.get_event_loop().
+                create_task(progress(d, t, event, c_time, "trying to upload")),
             )
             os.remove(o)
         except Exception as e:
@@ -139,7 +137,8 @@ async def take_screen_shot(video_file, output_directory, ttl):
 
 
 async def cult_small_video(video_file, output_directory, start_time, end_time):
-    out_put_file_name = output_directory + "/" + str(round(time.time())) + ".mp4"
+    out_put_file_name = output_directory + "/" + str(round(
+        time.time())) + ".mp4"
     file_genertor_command = [
         "ffmpeg",
         "-i",

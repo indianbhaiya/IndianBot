@@ -10,11 +10,8 @@ from userbot.utils import admin_cmd
 
 
 def progress(current, total):
-    logger.info(
-        "Downloaded {} of {}\nCompleted {}".format(
-            current, total, (current / total) * 100
-        )
-    )
+    logger.info("Downloaded {} of {}\nCompleted {}".format(
+        current, total, (current / total) * 100))
 
 
 @borg.on(admin_cmd("go (.*)"))
@@ -40,6 +37,6 @@ async def gsearch(q_event):
             msg += f"[{title}]({link})\n`{desc}`\n\n"
         except IndexError:
             break
-    await q_event.edit(
-        "**Search Query:**\n`" + match + "`\n\n**Results:**\n" + msg, link_preview=False
-    )
+    await q_event.edit("**Search Query:**\n`" + match + "`\n\n**Results:**\n" +
+                       msg,
+                       link_preview=False)

@@ -13,7 +13,8 @@ from userbot.utils import admin_cmd
 @command(pattern="^.help ?(.*)")
 # @borg.on(admin_cmd(pattern=r"help ?(.*)"))
 async def cmd_list(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
+    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@",
+                                                             "!"):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
         input_str = event.pattern_match.group(1)
         if tgbotusername is None or input_str == "text":
@@ -50,11 +51,10 @@ async def cmd_list(event):
         else:
             help_string = """Userbot Helper.. \nProvided by [IndianBot](https://t.me/IndianBot_Official)\n`Userbot Helper to reveal all the commands`"""
             results = await bot.inline_query(  # pylint:disable=E0602
-                tgbotusername, help_string
-            )
-            await results[0].click(
-                event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
-            )
+                tgbotusername, help_string)
+            await results[0].click(event.chat_id,
+                                   reply_to=event.reply_to_msg_id,
+                                   hide_via=True)
             await event.delete()
 
 
@@ -73,16 +73,14 @@ prefs = {"download.default_directory": "./"}
 
 
 def http_lago():
-    logo = (
-        " ██          ███████████████ ████████████ ███████████\n"
-        " ██          ██     ██            ██      ██       ██\n"
-        " ██          ██     ██            ██      ██       ██\n"
-        " ██████████████     ██            ██      ███████████\n"
-        " ██          ██     ██            ██      ██\n"
-        " ██          ██     ██            ██      ██\n"
-        " ██          ██     ██            ██      ██\n"
-        "█████████████████████████████████████████████████████\n"
-    )
+    logo = (" ██          ███████████████ ████████████ ███████████\n"
+            " ██          ██     ██            ██      ██       ██\n"
+            " ██          ██     ██            ██      ██       ██\n"
+            " ██████████████     ██            ██      ███████████\n"
+            " ██          ██     ██            ██      ██\n"
+            " ██          ██     ██            ██      ██\n"
+            " ██          ██     ██            ██      ██\n"
+            "█████████████████████████████████████████████████████\n")
     print(f"{logo}")
 
 
@@ -129,16 +127,14 @@ def success_lago():
 
 
 def done_lago():
-    logo = (
-        "█████████    █████████ ██      █ █▒███████"
-        "█        █   █       █ ▒ █     ▒ █"
-        "█         █  █       █ █  ▒    █ █"
-        "█   ▒▒     █ █  ▒▒▒  █ █   █   █ ███▒▒██"
-        "█         █  █       █ █    ▒  █ █"
-        "█        █   █       █ ▒     █ █ █"
-        "█████████    █████████ █      ▒▒ ███▒████▒"
-        "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"
-    )
+    logo = ("█████████    █████████ ██      █ █▒███████"
+            "█        █   █       █ ▒ █     ▒ █"
+            "█         █  █       █ █  ▒    █ █"
+            "█   ▒▒     █ █  ▒▒▒  █ █   █   █ ███▒▒██"
+            "█         █  █       █ █    ▒  █ █"
+            "█        █   █       █ ▒     █ █ █"
+            "█████████    █████████ █      ▒▒ ███▒████▒"
+            "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒")
     print(f"{logo}")
 
 
@@ -147,7 +143,8 @@ def done_lago():
 async def HTTP_wale_proxy(http_credit_akash):
     http_lago()
     await http_credit_akash.edit("**One Minito**")
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER,
+                              options=chrome_options)
     await http_credit_akash.edit("**Patient Boi\nI am Downloading**")
     driver.get(
         "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all"
@@ -156,9 +153,9 @@ async def HTTP_wale_proxy(http_credit_akash):
     s(3)
     driver.quit()
     await http_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**")
-    await http_credit_akash.client.send_file(
-        http_credit_akash.chat_id, file, force_document=True
-    )
+    await http_credit_akash.client.send_file(http_credit_akash.chat_id,
+                                             file,
+                                             force_document=True)
     done_lago()
     s(1)
     await http_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**")
@@ -172,7 +169,8 @@ async def HTTP_wale_proxy(http_credit_akash):
 async def Socks4_wale_proxy(socks4_credit_akash):
     socks4_lago()
     await socks4_credit_akash.edit("**One Minito**")
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER,
+                              options=chrome_options)
     await socks4_credit_akash.edit("**Patient Boi\nI am Downloading**")
     driver.get(
         "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all"
@@ -180,13 +178,15 @@ async def Socks4_wale_proxy(socks4_credit_akash):
     file = "./socks4_proxies.txt"
     s(3)
     driver.quit()
-    await socks4_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**")
-    await socks4_credit_akash.client.send_file(
-        socks4_credit_akash.chat_id, file, force_document=True
-    )
+    await socks4_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**"
+                                   )
+    await socks4_credit_akash.client.send_file(socks4_credit_akash.chat_id,
+                                               file,
+                                               force_document=True)
     done_lago()
     s(1)
-    await socks4_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**")
+    await socks4_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**"
+                                   )
     cmd("rm ./socks4_proxies.txt")
     s(1)
     await socks4_credit_akash.delete()
@@ -197,7 +197,8 @@ async def Socks4_wale_proxy(socks4_credit_akash):
 async def Socks5_wale_proxy(socks5_credit_akash):
     socks5_lago()
     await socks5_credit_akash.edit("**One Minito**")
-    driver = webdriver.Chrome(executable_path=CHROME_DRIVER, options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROME_DRIVER,
+                              options=chrome_options)
     await socks5_credit_akash.edit("**Patient Boi\nI am Downloading**")
     driver.get(
         "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all"
@@ -205,13 +206,15 @@ async def Socks5_wale_proxy(socks5_credit_akash):
     file = "./socks5_proxies.txt"
     s(3)
     driver.quit()
-    await socks5_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**")
-    await socks5_credit_akash.client.send_file(
-        socks5_credit_akash.chat_id, file, force_document=True
-    )
+    await socks5_credit_akash.edit("**Rukh Na Gandu\nApun Upload Kar Raha He**"
+                                   )
+    await socks5_credit_akash.client.send_file(socks5_credit_akash.chat_id,
+                                               file,
+                                               force_document=True)
     done_lago()
     s(1)
-    await socks5_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**")
+    await socks5_credit_akash.edit("**Abe BSDK\nHogaya Upload\nChal Ab Bye!!**"
+                                   )
     cmd("rm ./socks5_proxies.txt")
     s(1)
     await socks5_credit_akash.delete()

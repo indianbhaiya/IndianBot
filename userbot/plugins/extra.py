@@ -78,7 +78,8 @@ async def source(e):
 @borg.on(admin_cmd("readme$"))
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/indianbhaiya/IndianBot/blob/master/README.md")
+        await e.edit(
+            "https://github.com/indianbhaiya/IndianBot/blob/master/README.md")
 
 
 @borg.on(admin_cmd("heart$"))

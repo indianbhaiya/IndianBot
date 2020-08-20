@@ -18,7 +18,9 @@ async def _(event):
             "u is chakka",
         ]
     elif input_str in "thinking":
-        emoticons = ["(҂⌣̀_⌣́)", "（；¬＿¬)", "(-｡-;", "┌[ O ʖ̯ O ]┐", "〳 ͡° Ĺ̯ ͡° 〵"]
+        emoticons = [
+            "(҂⌣̀_⌣́)", "（；¬＿¬)", "(-｡-;", "┌[ O ʖ̯ O ]┐", "〳 ͡° Ĺ̯ ͡° 〵"
+        ]
     elif input_str in "waving":
         emoticons = [
             "(ノ^∇^)",
@@ -39,7 +41,9 @@ async def _(event):
             "( ＾◡＾)っ (‿|‿)",
         ]
     elif input_str in "love":
-        emoticons = ["乂❤‿❤乂", "(｡♥‿♥｡)", "( ͡~ ͜ʖ ͡°)", "໒( ♥ ◡ ♥ )७", "༼♥ل͜♥༽"]
+        emoticons = [
+            "乂❤‿❤乂", "(｡♥‿♥｡)", "( ͡~ ͜ʖ ͡°)", "໒( ♥ ◡ ♥ )७", "༼♥ل͜♥༽"
+        ]
     elif input_str in "confused":
         emoticons = [
             "(・_・ヾ",
@@ -52,7 +56,9 @@ async def _(event):
     elif input_str in "dead":
         emoticons = ["(✖╭╮✖)", "✖‿✖", "(+_+)", "(✖﹏✖)", "∑(✘Д✘๑)"]
     elif input_str in "sad":
-        emoticons = ["(＠´＿｀＠)", "⊙︿⊙", "(▰˘︹˘▰)", "●︿●", "(　´_ﾉ` )", "彡(-_-;)彡"]
+        emoticons = [
+            "(＠´＿｀＠)", "⊙︿⊙", "(▰˘︹˘▰)", "●︿●", "(　´_ﾉ` )", "彡(-_-;)彡"
+        ]
     elif input_str in "dog":
         emoticons = ["-ᄒᴥᄒ-", "◖⚆ᴥ⚆◗"]
     else:

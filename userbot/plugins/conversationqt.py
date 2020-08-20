@@ -33,7 +33,8 @@ async def _(event):
         )
 
     if x == 4:
-        await event.edit('`"What scene from a TV show will you never forget?"`')
+        await event.edit('`"What scene from a TV show will you never forget?"`'
+                         )
 
     if x == 5:
         await event.edit(
@@ -50,11 +51,11 @@ async def _(event):
 
     if x == 8:
         await event.edit(
-            '`"Would you go out with me if I was the last person on earth?"`'
-        )
+            '`"Would you go out with me if I was the last person on earth?"`')
 
     if x == 9:
-        await event.edit('`"If you switched genders for the day, what would you do?"`')
+        await event.edit(
+            '`"If you switched genders for the day, what would you do?"`')
 
     if x == 10:
         await event.edit(
@@ -77,12 +78,12 @@ async def _(event):
         )
 
     if x == 14:
-        await event.edit('`"How many kids do you want to have in the future?"`')
+        await event.edit('`"How many kids do you want to have in the future?"`'
+                         )
 
     if x == 15:
         await event.edit(
-            '`"Who in this group would be the worst person to date? Why?"`'
-        )
+            '`"Who in this group would be the worst person to date? Why?"`')
 
     if x == 16:
         await event.edit('`"What does your dream boy or girl look like?"`')
@@ -127,7 +128,8 @@ async def _(event):
         )
 
     if x == 26:
-        await event.edit('`"Live-in relation or marriage, what do you prefer?"`')
+        await event.edit(
+            '`"Live-in relation or marriage, what do you prefer?"`')
 
     if x == 27:
         await event.edit('`"What is your favorite cuisine or type of food?"`')
@@ -141,18 +143,20 @@ async def _(event):
         await event.edit('`"What do you think of online education?"`')
 
     if x == 30:
-        await event.edit('`"What are some goals you have failed to accomplish?"`')
+        await event.edit(
+            '`"What are some goals you have failed to accomplish?"`')
 
     if x == 31:
-        await event.edit('`"Will technology save the human race or destroy it?"`')
+        await event.edit(
+            '`"Will technology save the human race or destroy it?"`')
 
     if x == 32:
-        await event.edit('`"What was the best invention of the last 50 years?"`')
+        await event.edit(
+            '`"What was the best invention of the last 50 years?"`')
 
     if x == 33:
         await event.edit(
-            '`"Have you travelled to any different countries? Which ones?"`'
-        )
+            '`"Have you travelled to any different countries? Which ones?"`')
 
     if x == 34:
         await event.edit(
@@ -160,7 +164,8 @@ async def _(event):
         )
 
     if x == 35:
-        await event.edit('`"What’s the most addictive mobile game you have played?"`')
+        await event.edit(
+            '`"What’s the most addictive mobile game you have played?"`')
 
     if x == 36:
         await event.edit('`"How many apps do you have on your phone?"`')
@@ -185,10 +190,12 @@ async def _(event):
         await event.edit('`"What song do you play most often?"`')
 
     if x == 42:
-        await event.edit('`"Suggest a new rule that should be added in this group!"`')
+        await event.edit(
+            '`"Suggest a new rule that should be added in this group!"`')
 
     if x == 43:
-        await event.edit('`"What app on your phone do you think I should get?"`')
+        await event.edit(
+            '`"What app on your phone do you think I should get?"`')
 
     if x == 44:
         await event.edit(
@@ -196,10 +203,12 @@ async def _(event):
         )
 
     if x == 45:
-        await event.edit('`"What isn’t real but you desperately wish it was?"`')
+        await event.edit('`"What isn’t real but you desperately wish it was?"`'
+                         )
 
     if x == 46:
-        await event.edit('`"What thing do you really wish you could buy right now?"`')
+        await event.edit(
+            '`"What thing do you really wish you could buy right now?"`')
 
     if x == 47:
         await event.edit(
@@ -224,14 +233,14 @@ async def _(event):
 
     if x == 52:
         await event.edit(
-            '`"If you died today, what would your greatest achievement be?"`'
-        )
+            '`"If you died today, what would your greatest achievement be?"`')
 
     if x == 53:
         await event.edit('`"What method will you choose to kill yourself?"`')
 
     if x == 54:
-        await event.edit('`"What’s the best news you\'ve heard in the last 24 hours?"`')
+        await event.edit(
+            '`"What’s the best news you\'ve heard in the last 24 hours?"`')
 
     if x == 55:
         await event.edit(

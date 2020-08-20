@@ -60,6 +60,7 @@ async def rm_deletedacc(show):
         if del_u > 0:
             del_status = f"`Found` **{del_u}** `ghost/deleted/zombie account(s) in this group,\
             \nclean them by using .zombies clean`"
+
         await show.edit(del_status)
         return
     chat = await show.get_chat()
@@ -75,21 +76,22 @@ async def rm_deletedacc(show):
         if user.deleted:
             try:
                 await show.client(
-                    EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
-                )
+                    EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS))
             except ChatAdminRequiredError:
                 await show.edit("`I don't have ban rights in this group`")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
-            await show.client(EditBannedRequest(show.chat_id, user.id, UNBAN_RIGHTS))
+            await show.client(
+                EditBannedRequest(show.chat_id, user.id, UNBAN_RIGHTS))
             del_u += 1
     if del_u > 0:
         del_status = f"Cleaned **{del_u}** deleted account(s)"
     if del_a > 0:
         del_status = f"Cleaned **{del_u}** deleted account(s) \
         \n**{del_a}** deleted admin accounts are not removed"
+
     await show.edit(del_status)
     await sleep(2)
     await show.delete()

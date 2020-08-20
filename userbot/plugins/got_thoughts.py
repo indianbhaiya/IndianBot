@@ -22,7 +22,8 @@ async def _(event):
     x = random.randrange(1, 40)
 
     if x == 1:
-        await event.edit('`"The man who passes the sentence should swing the sword."`')
+        await event.edit(
+            '`"The man who passes the sentence should swing the sword."`')
 
     if x == 2:
         await event.edit(
@@ -51,7 +52,8 @@ async def _(event):
         await event.edit('`"If I look back I am lost."`')
 
     if x == 8:
-        await event.edit('`"When you play the game of thrones, you win or you die."`')
+        await event.edit(
+            '`"When you play the game of thrones, you win or you die."`')
 
     if x == 9:
         await event.edit(
@@ -59,13 +61,15 @@ async def _(event):
         )
 
     if x == 10:
-        await event.edit('`"What do we say to the Lord of Death?\nNot Today!"`')
+        await event.edit('`"What do we say to the Lord of Death?\nNot Today!"`'
+                         )
 
     if x == 11:
         await event.edit('`"Every flight begins with a fall."`')
 
     if x == 12:
-        await event.edit('`"Different roads sometimes lead to the same castle."`')
+        await event.edit(
+            '`"Different roads sometimes lead to the same castle."`')
 
     if x == 13:
         await event.edit(
@@ -111,8 +115,7 @@ async def _(event):
 
     if x == 25:
         await event.edit(
-            '`"A lion does not concern himself with the opinion of sheep."`'
-        )
+            '`"A lion does not concern himself with the opinion of sheep."`')
 
     if x == 26:
         await event.edit('`"Chaos isn\'t a pit. Chaos is a ladder."`')
@@ -133,10 +136,12 @@ async def _(event):
         )
 
     if x == 30:
-        await event.edit('`"A girl is Arya Stark of Winterfell. And I\'m going home."`')
+        await event.edit(
+            '`"A girl is Arya Stark of Winterfell. And I\'m going home."`')
 
     if x == 31:
-        await event.edit("`\"Any man who must say 'I am the King' is no true King.\"`")
+        await event.edit(
+            "`\"Any man who must say 'I am the King' is no true King.\"`")
 
     if x == 32:
         await event.edit('`"If I fall, don\'t bring me back."`')
