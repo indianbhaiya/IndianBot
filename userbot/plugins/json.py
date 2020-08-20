@@ -1,7 +1,10 @@
 """Get Detailed info about any message
 Syntax: .json"""
 import io
+
 from userbot.utils import admin_cmd
+
+
 @borg.on(admin_cmd("json"))
 async def _(event):
     if event.fwd_from:
@@ -21,7 +24,7 @@ async def _(event):
                 out_file,
                 force_document=True,
                 allow_cache=False,
-                reply_to=reply_to_id
+                reply_to=reply_to_id,
             )
             await event.delete()
     else:

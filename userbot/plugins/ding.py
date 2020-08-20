@@ -4,7 +4,10 @@ Available Commands:
 .ding
 """
 import asyncio
+
 from userbot.utils import admin_cmd
+
+
 @borg.on(admin_cmd(pattern=r"ding"))
 async def _(event):
     if event.fwd_from:
@@ -22,7 +25,8 @@ async def _(event):
         "⬜⬜⬛⬜⬜\n⬜⬜⬛⬜⬜\n⬜⬜🔴⬜⬜",
         "⬜⬜⬛⬜⬜\n⬜⬛⬜⬜⬜\n🔴⬜⬜⬜⬜",
         "🔴⬛⬛⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-        "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜\n⬜  [BECOME A VIDHAYAK](https://github.com/indianbhaiya/IndianBot/) ⬜\n⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜"]
+        "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜\n⬜  [BECOME A VIDHAYAK](https://github.com/indianbhaiya/IndianBot/) ⬜\n⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜",
+    ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i])

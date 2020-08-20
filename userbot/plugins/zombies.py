@@ -1,14 +1,16 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
 """  Cmd = .zombie  """
-from telethon import events
-from userbot.utils import admin_cmd
 from asyncio import sleep
-from telethon.errors import (ChatAdminRequiredError, UserAdminInvalidError)
+
+from telethon import events
+from telethon.errors import ChatAdminRequiredError
+from telethon.errors import UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
+
+from userbot.utils import admin_cmd
 
 # =================== CONSTANT ===================
 
@@ -58,6 +60,7 @@ async def rm_deletedacc(show):
         if del_u > 0:
             del_status = f"`Found` **{del_u}** `ghost/deleted/zombie account(s) in this group,\
             \nclean them by using .zombies clean`"
+
         await show.edit(del_status)
         return
     chat = await show.get_chat()
@@ -88,11 +91,14 @@ async def rm_deletedacc(show):
     if del_a > 0:
         del_status = f"Cleaned **{del_u}** deleted account(s) \
         \n**{del_a}** deleted admin accounts are not removed"
+
     await show.edit(del_status)
     await sleep(2)
     await show.delete()
     if Config.G_BAN_LOGGER_GROUP is not None:
         await show.client.send_message(
-            Config.G_BAN_LOGGER_GROUP, "#CLEANUP\n"
+            Config.G_BAN_LOGGER_GROUP,
+            "#CLEANUP\n"
             f"Cleaned **{del_u}** deleted account(s) !!\
-            \nCHAT: {show.chat.title}(`{show.chat_id}`)")
+            \nCHAT: {show.chat.title}(`{show.chat_id}`)",
+        )

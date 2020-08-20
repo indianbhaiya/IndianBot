@@ -1,14 +1,20 @@
-from userbot.utils import admin_cmd
 import glob
 import os
+
+from userbot.utils import admin_cmd
+
 try:
     import instantmusic
 except ImportError:
     os.system("pip install instantmusic")
     import subprocess
 os.system("rm -rf *.mp3")
+
+
 def bruh(name):
     os.system("instantmusic -q -s " + name)
+
+
 @borg.on(admin_cmd(pattern="song ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -28,6 +34,7 @@ async def _(event):
         force_document=True,
         allow_cache=False,
         caption=cmd,
-        reply_to=reply_to_id)
+        reply_to=reply_to_id,
+    )
     os.system("rm -rf *.mp3")
     subprocess.check_output("rm -rf *.mp3", shell=True)

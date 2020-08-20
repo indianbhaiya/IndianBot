@@ -1,5 +1,8 @@
 import random
+
 from uniborg.util import admin_cmd
+
+
 @borg.on(admin_cmd(pattern=r"jainder(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -12,14 +15,12 @@ async def _(event):
             "u is aurat",
             "u is woman",
             "u is gey",
-            "u is chakka"]
+            "u is chakka",
+        ]
     elif input_str in "thinking":
         emoticons = [
-            "(҂⌣̀_⌣́)",
-            "（；¬＿¬)",
-            "(-｡-;",
-            "┌[ O ʖ̯ O ]┐",
-            "〳 ͡° Ĺ̯ ͡° 〵"]
+            "(҂⌣̀_⌣́)", "（；¬＿¬)", "(-｡-;", "┌[ O ʖ̯ O ]┐", "〳 ͡° Ĺ̯ ͡° 〵"
+        ]
     elif input_str in "waving":
         emoticons = [
             "(ノ^∇^)",
@@ -28,7 +29,8 @@ async def _(event):
             "ヾ(＾-＾)ノ",
             "ヾ(◍’౪◍)ﾉﾞ♡",
             "(ό‿ὸ)ﾉ",
-            "(ヾ(´・ω・｀)"]
+            "(ヾ(´・ω・｀)",
+        ]
     elif input_str in "wtf":
         emoticons = [
             "༎ຶ‿༎ຶ",
@@ -36,14 +38,12 @@ async def _(event):
             "╰U╯☜(◉ɷ◉ )",
             "(;´༎ຶ益༎ຶ)♡",
             "╭∩╮(︶ε︶*)chu",
-            "( ＾◡＾)っ (‿|‿)"]
+            "( ＾◡＾)っ (‿|‿)",
+        ]
     elif input_str in "love":
         emoticons = [
-            "乂❤‿❤乂",
-            "(｡♥‿♥｡)",
-            "( ͡~ ͜ʖ ͡°)",
-            "໒( ♥ ◡ ♥ )७",
-            "༼♥ل͜♥༽"]
+            "乂❤‿❤乂", "(｡♥‿♥｡)", "( ͡~ ͜ʖ ͡°)", "໒( ♥ ◡ ♥ )७", "༼♥ل͜♥༽"
+        ]
     elif input_str in "confused":
         emoticons = [
             "(・_・ヾ",
@@ -51,27 +51,17 @@ async def _(event):
             "﴾͡๏̯͡๏﴿",
             "(￣■￣;)!?",
             "▐ ˵ ͠° (oo) °͠ ˵ ▐",
-            "(-_-)ゞ゛"]
+            "(-_-)ゞ゛",
+        ]
     elif input_str in "dead":
-        emoticons = [
-            "(✖╭╮✖)",
-            "✖‿✖",
-            "(+_+)",
-            "(✖﹏✖)",
-            "∑(✘Д✘๑)"]
+        emoticons = ["(✖╭╮✖)", "✖‿✖", "(+_+)", "(✖﹏✖)", "∑(✘Д✘๑)"]
     elif input_str in "sad":
         emoticons = [
-            "(＠´＿｀＠)",
-            "⊙︿⊙",
-            "(▰˘︹˘▰)",
-            "●︿●",
-            "(　´_ﾉ` )",
-            "彡(-_-;)彡"]
+            "(＠´＿｀＠)", "⊙︿⊙", "(▰˘︹˘▰)", "●︿●", "(　´_ﾉ` )", "彡(-_-;)彡"
+        ]
     elif input_str in "dog":
-        emoticons = [
-            "-ᄒᴥᄒ-",
-            "◖⚆ᴥ⚆◗"]
-    else:    
+        emoticons = ["-ᄒᴥᄒ-", "◖⚆ᴥ⚆◗"]
+    else:
         emoticons = [
             "( ͡° ͜ʖ ͡°)",
             "¯\_(ツ)_/¯",
@@ -83,7 +73,8 @@ async def _(event):
             "ಠ_ಠ",
             "(☞ ͡° ͜ʖ ͡°)☞",
             "¯\_༼ ି ~ ି ༽_/¯",
-            "c༼ ͡° ͜ʖ ͡° ༽⊃"]
+            "c༼ ͡° ͜ʖ ͡° ༽⊃",
+        ]
     index = random.randint(0, len(emoticons))
     output_str = emoticons[index]
     await event.edit(output_str)

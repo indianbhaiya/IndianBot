@@ -1,7 +1,11 @@
 import asyncio
+
 import telethon.utils
 from telethon import events
+
 from userbot.utils import admin_cmd
+
+
 async def get_target_message(event):
     if event.is_reply and (await
                            event.get_reply_message()).from_id == borg.uid:
@@ -10,16 +14,21 @@ async def get_target_message(event):
                                             limit=20):
         if message.out:
             return message
+
+
 async def await_read(chat, message):
     chat = telethon.utils.get_peer_id(chat)
-    
+
     async def read_filter(read_event):
         return read_event.chat_id == chat and read_event.is_read(message)
+
     fut = borg.await_event(events.MessageRead(inbox=False), read_filter)
     if await is_read(borg, chat, message):
         fut.cancel()
         return
     await fut
+
+
 @borg.on(admin_cmd(pattern="(del)(?:ete)?$"))
 @borg.on(admin_cmd(pattern="(edit)(?:\s+(.*))?$"))
 async def delete(event):
