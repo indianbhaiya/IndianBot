@@ -17,4 +17,4 @@ INDIANBOT_IS_ALIVE = (
 async def amireallyalive(alive):
     chat = await alive.get_chat()
     await alive.delete()
-    await borg.send_message(chat, INDIANBOT_IS_ALIVE)
+    await borg.send_message(chat, INDIANBOT_IS_ALIVE, link_preview=False)
