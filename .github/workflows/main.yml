@@ -32,6 +32,6 @@ jobs:
           commit_message: 'Bug Fixes'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: indianbhaiya
-          commit_user_email: indianbhaiya@gmail.com
-          commit_author: indianbhaiya <pureindialover@gmail.com>
+          commit_user_name: Indian Bhai
+          commit_user_email: pureindialover@gmail.com
+          commit_author: pureindialover <pureindialover@gmail.com>
