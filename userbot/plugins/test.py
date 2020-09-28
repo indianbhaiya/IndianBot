@@ -1,8 +1,5 @@
-from telethon import events
-import asyncio
-import os
-import sys
 from userbot.utils import admin_cmd
+
 
 @borg.on(admin_cmd(pattern="test ?(.*)", allow_sudo=True))
 async def test(event):

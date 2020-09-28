@@ -4,7 +4,7 @@ import os
 from userbot.utils import admin_cmd
 
 try:
-    import instantmusic
+    pass
 except ImportError:
     os.system("pip install instantmusic")
     import subprocess

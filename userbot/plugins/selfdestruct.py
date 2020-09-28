@@ -6,10 +6,7 @@
 
 import time
 
-from telethon.errors import rpcbaseerrors
 from userbot.utils import admin_cmd
-import importlib.util
-
 
 
 @borg.on(admin_cmd("sd", outgoing=True))

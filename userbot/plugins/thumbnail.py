@@ -24,8 +24,8 @@ def get_video_thumb(file, output=None, width=320):
             file,
             "-ss",
             str(
-                int((0, metadata.get("duration").seconds
-                     )[metadata.has("duration")] / 2)),
+                int((0, metadata.get("duration").seconds)[metadata.has("duration")] / 2)
+            ),
             "-vframes",
             "1",
             output,
@@ -48,22 +48,23 @@ async def _(event):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
         downloaded_file_name = await borg.download_media(
-            await event.get_reply_message(), Config.TMP_DOWNLOAD_DIRECTORY)
+            await event.get_reply_message(), Config.TMP_DOWNLOAD_DIRECTORY
+        )
         if downloaded_file_name.endswith(".mp4"):
             downloaded_file_name = get_video_thumb(downloaded_file_name)
         metadata = extractMetadata(createParser(downloaded_file_name))
         height = 0
         if metadata.has("height"):
             height = metadata.get("height")
-        Image.open(downloaded_file_name).convert("RGB").save(
-            downloaded_file_name)
+        Image.open(downloaded_file_name).convert("RGB").save(downloaded_file_name)
         img = Image.open(downloaded_file_name)
         img.resize((320, height))
         img.save(thumb_image_path, "JPEG")
         os.remove(downloaded_file_name)
         await event.edit(
-            "Custom video / file thumbnail saved. " +
-            "This image will be used in the upload, till `.clearthumbnail`.")
+            "Custom video / file thumbnail saved. "
+            + "This image will be used in the upload, till `.clearthumbnail`."
+        )
     else:
         await event.edit("Reply to a photo to save custom thumbnail")
 
@@ -84,8 +85,9 @@ async def _(event):
     if event.reply_to_msg_id:
         r = await event.get_reply_message()
         try:
-            a = await borg.download_media(r.media.document.thumbs[0],
-                                          Config.TMP_DOWNLOAD_DIRECTORY)
+            a = await borg.download_media(
+                r.media.document.thumbs[0], Config.TMP_DOWNLOAD_DIRECTORY
+            )
         except Exception as e:
             await event.edit(str(e))
         try:

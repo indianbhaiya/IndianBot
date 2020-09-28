@@ -1,8 +1,9 @@
 """Color Plugin for @UniBorg
 Syntax: .color <color_code>"""
-from telethon import events
 import os
+
 from PIL import Image, ImageColor
+
 from userbot.utils import admin_cmd
 
 
@@ -29,7 +30,7 @@ async def _(event):
                 "UniBorg.png",
                 force_document=False,
                 caption=input_str,
-                reply_to=message_id
+                reply_to=message_id,
             )
             os.remove("UniBorg.png")
             await event.delete()

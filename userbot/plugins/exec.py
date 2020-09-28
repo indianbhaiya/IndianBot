@@ -36,8 +36,7 @@ async def _(event):
         evaluation = stdout
     else:
         evaluation = "Success"
-    final_output = "**EXEC**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(
-        cmd, evaluation)
+    final_output = "**EXEC**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(cmd, evaluation)
     if len(final_output) > 4096:
         with io.BytesIO(str.encode(final_output)) as out_file:
             out_file.name = "eval.text"
@@ -55,6 +54,5 @@ async def _(event):
 
 
 async def aexec(code, event):
-    exec(f"async def __aexec(event): " + "".join(f"\n {l}"
-                                                 for l in code.split("\n")))
+    exec(f"async def __aexec(event): " + "".join(f"\n {l}" for l in code.split("\n")))
     return await locals()["__aexec"](event)

@@ -4,9 +4,6 @@ import time
 import zipfile
 
 from uniborg.util import admin_cmd
-from uniborg.util import humanbytes
-from uniborg.util import progress
-from uniborg.util import time_formatter
 
 
 @borg.on(admin_cmd(pattern="compress ?(.*)"))
@@ -20,18 +17,19 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
         try:
-            c_time = time.time()
+            time.time()
             downloaded_file_name = await borg.download_media(
-                reply_message, Config.TMP_DOWNLOAD_DIRECTORY)
+                reply_message, Config.TMP_DOWNLOAD_DIRECTORY
+            )
             directory_name = downloaded_file_name
             await event.edit("Finish downloading to my local")
-            zipfile.ZipFile(directory_name + ".zip", "w",
-                            zipfile.ZIP_DEFLATED).write(directory_name)
+            zipfile.ZipFile(directory_name + ".zip", "w", zipfile.ZIP_DEFLATED).write(
+                directory_name
+            )
             await borg.send_file(
                 event.chat_id,
                 directory_name + ".zip",
-                caption=
-                "Zipped By [IndianBot](https://t.me/IndianArMyGiveaway)",
+                caption="Zipped By [IndianBot](https://t.me/IndianArMyGiveaway)",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -48,7 +46,9 @@ async def _(event):
             await mone.edit(str(e))
     elif input_str:
         directory_name = input_str
-        zipfile.ZipFile(directory_name + ".zip", "w",
-                        zipfile.ZIP_DEFLATED).write(directory_name)
+        zipfile.ZipFile(directory_name + ".zip", "w", zipfile.ZIP_DEFLATED).write(
+            directory_name
+        )
         await event.edit(
-            "Local file compressed to `{}`".format(directory_name + ".zip"))
+            "Local file compressed to `{}`".format(directory_name + ".zip")
+        )

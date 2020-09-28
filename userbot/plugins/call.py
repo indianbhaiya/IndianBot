@@ -4,8 +4,6 @@ Available Commands:
 """
 import asyncio
 
-from telethon import events
-
 from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd
 

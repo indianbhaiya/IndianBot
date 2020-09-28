@@ -17,7 +17,7 @@ async def _(event):
         await event.edit("```reply to text message```")
         return
     chat = "@image_deepfrybot"
-    sender = reply_message.sender
+    reply_message.sender
     if reply_message.sender.bot:
         await event.edit("```Reply to actual users message.```")
         return
@@ -25,12 +25,12 @@ async def _(event):
     async with borg.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=432858024))
+                events.NewMessage(incoming=True, from_users=432858024)
+            )
             await borg.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply(
-                "```Please unblock @sangmatainfo_bot and try again```")
+            await event.reply("```Please unblock @sangmatainfo_bot and try again```")
             return
         if response.text.startswith("Forward"):
             await event.edit(

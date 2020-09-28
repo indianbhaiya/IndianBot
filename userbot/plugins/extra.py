@@ -4,10 +4,7 @@ from collections import deque
 
 from telethon.tl.functions.channels import LeaveChannelRequest
 
-from userbot import bot
-from userbot import BOTLOG
-from userbot import BOTLOG_CHATID
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 from userbot.utils import admin_cmd
 
 
@@ -78,8 +75,7 @@ async def source(e):
 @borg.on(admin_cmd("readme$"))
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit(
-            "https://github.com/indianbhaiya/IndianBot/blob/master/README.md")
+        await e.edit("https://github.com/indianbhaiya/IndianBot/blob/master/README.md")
 
 
 @borg.on(admin_cmd("heart$"))
