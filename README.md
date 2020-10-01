@@ -68,7 +68,7 @@ Support Config.
 
 - Only two of the environment variables are mandatory.
 - This is because of `telethon.errors.rpc_error_list.ApiIdPublishedFloodError`
-  - `APP_ID`: You can get this value from https://my.telegram.org
+  - `APP_ID`: You can get this value from https://my.telegram.org //Not getting your telegram channel please help me
   - `API_HASH`: You can get this value from https://my.telegram.org
 - The userbot will not work without setting the mandatory vars.
 
