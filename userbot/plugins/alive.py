@@ -11,6 +11,7 @@ INDIANBOT_IS_ALIVE = (
     "     [🇮🇳Deploy This IndianBot🇮🇳](https://github.com/indianbhaiya/IndianBot)"
 )
 
+
 @borg.on(admin_cmd(pattern="alive"))
 async def _alive(alive):
     chat = await alive.get_chat()
