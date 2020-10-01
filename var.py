@@ -1,9 +1,10 @@
-from os import environ
+import os
 
-ENV = bool(environ.get("ENV", False))
+ENV = bool(os.environ.get("ENV", False))
 if ENV:
     from heroku_config import Var as Config
 else:
     from local_config import Development as Config
+
 
 Var = Config
