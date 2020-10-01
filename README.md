@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/newlogo.png">
 
-# Will Re-Start Again In 1 Day!!
+# Restarted
 
 Best User Bot To Manage Your Telegram Account 😉
 
@@ -75,10 +75,7 @@ Support Config.
 <p align="center">
 <img src="https://github.com/indianbhaiya/IndianBot/blob/master/.github/lic.png">
 
-```Python3
-MIT License
-
-Copyright (c) 2020 IndianBot
+<details><summary>License</summary>Copyright (c) 2020 IndianBot
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -100,6 +97,5 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 EXCLUDE THIS -- U MUST STOP USING THE USERBOT WHEN_EVER WE SAY OR IT WILL GO
 AGAINST THE LICENSE!!
 
-```
 
-```
+</details>
